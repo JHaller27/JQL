@@ -1,78 +1,7 @@
 using System;
-using System.Linq;
-using System.Collections.Generic;
 
 namespace Operations
 {
-    public class OperationParser
-    {
-        private static OperationParser Instance;
-
-        private Operation[] PrototypePool { get; }
-
-        private IDictionary<string, dynamic> Json { get; }
-
-        private OperationParser(IDictionary<string, dynamic> json) : this()
-        {
-            Json = json;
-        }
-
-        private OperationParser()
-        {
-            PrototypePool = new Operation[]
-            {
-                // Must be in Order of Operations
-            };
-        }
-
-        public static void LoadInstance(IDictionary<string, dynamic> json)
-        {
-            Instance = new OperationParser(json);
-        }
-
-        public static OperationParser GetInstance(IDictionary<string, dynamic> json)
-        {
-            LoadInstance(json);
-
-            return Instance;
-        }
-
-        public static OperationParser GetInstance()
-        {
-            if (Instance == null)
-            {
-                Instance = new OperationParser();
-            }
-
-            return Instance;
-        }
-
-        public Operation Parse(Queue<string> tokens)
-        {
-            string token;
-            while (tokens.TryDequeue(out token))
-            {
-                Operation prototype = PrototypePool.First(prototype => prototype.CanParse(token));
-
-                if (prototype.IsPrimitive())
-                {
-                    return prototype.ClonePrimitive(token);
-                }
-
-                int numArgs = prototype.RequiredArgs();
-                Operation[] args = new Operation[numArgs];
-                for (int i = 0; i < numArgs; i++)
-                {
-                    args[i] = Parse(tokens);
-                }
-
-                return prototype.Clone(args);
-            }
-
-            throw new ArgumentException("Token Queue passed to Parse was empty - no tokens to parse.");
-        }
-    }
-
     public abstract class Operation
     {
         public bool Evaluate()
