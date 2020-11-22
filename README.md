@@ -1,5 +1,31 @@
 # JQL
 
+Table of Contents
+=================
+* [Overview](#overview)
+* [Language Spec](#language-spec)
+  * [Path](#path)
+  * [Operators](#operators)
+    * [Order of Operations](#order-of-operations)
+    * [Not (not)](#not-not)
+    * [And (and)](#and-and)
+    * [Or (or)](#or-or)
+    * [Exists (ex)](#exists-ex)
+    * [Not Exists (nx)](#not-exists-nx)
+    * [Equals (eq)](#equals-eq)
+    * [Matches (mt/rx)](#matches-mtrx)
+    * [Less Than (lt)](#less-than-lt)
+    * [Less Than or Equal (le)](#less-than-or-equal-le)
+    * [Greater Than (gt)](#greater-than-gt)
+    * [Greater Than or Equal (ge)](#greater-than-or-equal-ge)
+    * [Len (len)](#len-len)
+    * [Is an Object (obj)](#is-an-object-obj)
+    * [Is an Array (arr)](#is-an-array-arr)
+    * [Is a String (str)](#is-a-string-str)
+    * [Is a Number (num)](#is-a-number-num)
+
+# Overview
+
 JSON Query Language (JQL), as one might expect, is a language used to query JSON data.
 It's primary purpose is to determine if a given JSON matches certain conditions (as opposed to competing with SQL and performing joins and aggregations, which are not supported by JQL).
 
