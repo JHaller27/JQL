@@ -77,22 +77,22 @@ namespace Operations
             return true;
         }
 
-        protected virtual string EvaluateAsString()
+        internal virtual string EvaluateAsString()
         {
             throw new InvalidOperationException("Operation cannot be evaluated as a string");
         }
 
-        protected virtual int EvaluateAsInt()
+        internal virtual int EvaluateAsInt()
         {
             throw new InvalidOperationException("Operation cannot be evaluated as an integer");
         }
 
-        protected virtual double EvaluateAsDouble()
+        internal virtual double EvaluateAsDouble()
         {
             throw new InvalidOperationException("Operation cannot be evaluated as a double");
         }
 
-        protected virtual bool EvaluateAsBool()
+        internal virtual bool EvaluateAsBool()
         {
             throw new InvalidOperationException("Operation cannot be evaluated as a boolean");
         }

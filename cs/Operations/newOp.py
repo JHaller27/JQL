@@ -28,22 +28,22 @@ namespace Operations {{
             return OperationRegex.IsMatch(token);
         }}
 
-        protected override string EvaluateAsString()
+        internal override string EvaluateAsString()
         {{
             throw new InvalidOperationException("Operation cannot be evaluated as a string");
         }}
 
-        protected override int EvaluateAsInt()
+        internal override int EvaluateAsInt()
         {{
             throw new InvalidOperationException("Operation cannot be evaluated as an integer");
         }}
 
-        protected override double EvaluateAsDouble()
+        internal override double EvaluateAsDouble()
         {{
             throw new InvalidOperationException("Operation cannot be evaluated as a double");
         }}
 
-        protected override bool EvaluateAsBool()
+        internal override bool EvaluateAsBool()
         {{
             throw new InvalidOperationException("Operation cannot be evaluated as a boolean");
         }}
