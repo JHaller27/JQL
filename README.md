@@ -11,9 +11,9 @@ Table of Contents
     * [And (and)](#and-and)
     * [Or (or)](#or-or)
     * [Exists (ex)](#exists-ex)
-    * [Not Exists (nx)](#not-exists-nx)
+    * [Not Exists (nex)](#not-exists-nex)
     * [Contains (in)](#contains-in)
-    * [Not Contains (nn)](#not-contains-nn)
+    * [Not Contains (nin)](#not-contains-nin)
     * [Equals (eq)](#equals-eq)
     * [Matches (mt/rx)](#matches-mtrx)
     * [Less Than (lt)](#less-than-lt)
@@ -125,9 +125,9 @@ Usage: `-ex <path>`
 Resolves to true if `path` is defined.
 
 
-### Not Exists (nx)
+### Not Exists (nex)
 
-Usage: `-nx <path>`
+Usage: `-nex <path>`
 
 Equivalent to `-not -ex <path>`
 
@@ -141,9 +141,9 @@ Usage: `-in <path|expr> <param|expr>`
 Resolves to true if `param|expr` is contained in `path|expr`
 
 
-### Not Contains (nn)
+### Not Contains (nin)
 
-Usage: `-nn <path|expr> <param|expr>`
+Usage: `-nin <path|expr> <param|expr>`
 
 Equivalent to `-not -in <param|expr> <path|expr>`
 

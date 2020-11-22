@@ -45,9 +45,9 @@ OPS = [
     ('-and', 2),
     ('-or', 2),
     ('-ex', 1),
-    ('-nx', 1),
+    ('-nex', 1),
     ('-in', 2),
-    ('-nn', 2),
+    ('-nin', 2),
     ('-eq', 2),
     ('-ne', 2),
     ('-mt', 2),
@@ -195,7 +195,7 @@ def evaluate(json: dict, operator):
 
                 return param_0 is not None
 
-            if op == '-nx':
+            if op == '-nex':
                 param_0 = evaluate(json, params[0])
 
                 return param_0 is None
@@ -206,7 +206,7 @@ def evaluate(json: dict, operator):
 
                 return some(lambda p: param_1 in p, param_0)
 
-            if op == '-nn':
+            if op == '-nin':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
