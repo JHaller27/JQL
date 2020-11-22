@@ -6,6 +6,7 @@ PATH=f"./{CLS_NAME}.cs"
 print(f"Creating {PATH} from template...")
 with open(PATH, "w") as fout:
     template = f'''using System;
+using System.Text.RegularExpressions;
 
 namespace Operations {{
     class {CLS_NAME} : Expression {{
