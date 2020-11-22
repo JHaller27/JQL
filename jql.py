@@ -193,36 +193,42 @@ def evaluate(json: dict, operator):
             if op == '-ex':
                 param_0 = evaluate(json, params[0])
 
-                return some(lambda p: p is not None, param_0)
+                return param_0 is not None
 
             if op == '-nx':
                 param_0 = evaluate(json, params[0])
 
-                return some(lambda p: p is None, param_0)
+                return param_0 is None
 
             if op == '-in':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda p: param_0 in p, param_1)
+                return some(lambda p: param_1 in p, param_0)
 
             if op == '-nn':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda p: param_0 not in p, param_1)
+                return some(lambda p: param_1 not in p, param_0)
 
             if op == '-eq':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda p: p.lower() == param_1.lower(), param_0)
+                if isinstance(param_0, str):
+                    return some(lambda p: p.lower() == param_1.lower(), param_0)
+
+                return some(lambda p: p == param_1, param_0)
 
             if op == '-ne':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda p: p.lower() != param_1.lower(), param_0)
+                if isinstance(param_0, str):
+                    return some(lambda p: p.lower() != param_1.lower(), param_0)
+
+                return some(lambda p: p != param_1, param_0)
 
             if op == '-mt' or op == '-rx':
                 param_0 = evaluate(json, params[0])
