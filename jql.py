@@ -219,19 +219,13 @@ def evaluate(json: dict, operator):
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                if isinstance(param_0, str):
-                    return some(lambda p: p.lower() == param_1.lower(), param_0)
-
-                return some(lambda p: p == param_1, param_0)
+                return some(lambda p: str(p).lower() == str(param_1).lower(), param_0)
 
             if op == '-ne':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                if isinstance(param_0, str):
-                    return some(lambda p: p.lower() != param_1.lower(), param_0)
-
-                return some(lambda p: p != param_1, param_0)
+                return some(lambda p: str(p).lower() != str(param_1).lower(), param_0)
 
             if op == '-mt' or op == '-rx':
                 param_0 = evaluate(json, params[0])
