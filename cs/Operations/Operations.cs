@@ -10,12 +10,31 @@ namespace Operations
 
         private Operation[] PrototypePool { get; }
 
+        private IDictionary<string, dynamic> Json { get; }
+
+        private OperationParser(IDictionary<string, dynamic> json) : this()
+        {
+            Json = json;
+        }
+
         private OperationParser()
         {
             PrototypePool = new Operation[]
             {
                 // Must be in Order of Operations
             };
+        }
+
+        public static void LoadInstance(IDictionary<string, dynamic> json)
+        {
+            Instance = new OperationParser(json);
+        }
+
+        public static OperationParser GetInstance(IDictionary<string, dynamic> json)
+        {
+            LoadInstance(json);
+
+            return Instance;
         }
 
         public static OperationParser GetInstance()
