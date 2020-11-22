@@ -25,6 +25,7 @@ Table of Contents
     * [Is an Array (arr)](#is-an-array-arr)
     * [Is a String (str)](#is-a-string-str)
     * [Is a Number (num)](#is-a-number-num)
+    * [Is a Boolean (bool)](#is-a-boolean-bool)
 
 # Overview
 
@@ -252,3 +253,9 @@ Resolves to true if `path` is a string.
 Usage: `-num <path>`
 
 Resolves to true if `path` is a number.
+
+### Is a Boolean (bool)
+
+Usage: `-bool <path>`
+
+Resolves to true if `path` is a boolean.
