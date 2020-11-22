@@ -15,6 +15,7 @@ Table of Contents
     * [Contains (in)](#contains-in)
     * [Not Contains (nin)](#not-contains-nin)
     * [Equals (eq)](#equals-eq)
+    * [Not Equals (ne)](#not-equals-ne)
     * [Matches (mt/rx)](#matches-mtrx)
     * [Less Than (lt)](#less-than-lt)
     * [Less Than or Equal (le)](#less-than-or-equal-le)
