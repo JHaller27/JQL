@@ -1,4 +1,5 @@
 import re
+import os
 import sys
 import json
 
@@ -297,22 +298,41 @@ def evaluate(json: dict, operator):
     return operator
 
 
+def list_files(dir_path: str):
+    for root, dirs, files in os.walk(dir_path):
+        for f in files:
+            yield os.path.join(root, f)
+
+
 def main():
-    json_path = sys.argv[1]
+    data_root = sys.argv[1]
     token_queue = Queue(sys.argv[2:])
 
     tree = create_tree(token_queue)
-    json_data = get_json(json_path)
-    try:
-        retv = evaluate(json_data, tree)
-    except InvalidPathOrExpression as ipoe:
-        return ipoe
 
-    if not isinstance(retv, bool):
-        raise TypeError(f"JQL does not resolve to a boolean (resolves to '{retv}')")
+    valid_files = []
+    for json_path in list_files(data_root):
+        json_data = get_json(json_path)
+        try:
+            retv = evaluate(json_data, tree)
+        except InvalidPathOrExpression as ipoe:
+            return ipoe
 
-    return retv
+        if not isinstance(retv, bool):
+            raise TypeError(f"JQL does not resolve to a boolean (resolves to '{retv}')")
+
+        if retv:
+            valid_files.append(json_path)
+
+    print("Files matching search criteria...")
+
+    if len(valid_files) == 0:
+        print("\tNone found")
+        return
+
+    for vf in valid_files:
+        print(f"\t{vf}")
 
 
 if __name__ == "__main__":
-    print(main())
+    main()
