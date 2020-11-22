@@ -97,26 +97,36 @@ def create_tree(tokens: Queue) -> dict:
 
 ARRAY_PATH_REGEX = re.compile(r'^(?P<path>[A-Za-z0-9]+)\[(?P<idx>\d+)?\]$')
 def get_value(json: dict, prop_path: str):
-    curr = json
+    curr = [json]
     for path_el in prop_path.split('.')[1:]:
-        if m := ARRAY_PATH_REGEX.match(path_el):
-            path = m['path']
-            idx = int(m['idx'])
+        new_curr = []
 
-            if path not in curr:
+        for el in curr:
+            if m := ARRAY_PATH_REGEX.match(path_el):
+                path = m['path']
+                idx = m['idx']
+
+                if path not in el:
+                    return None
+
+                elif idx is None:
+                    new_curr += el[path]
+
+                else:
+                    idx = int(idx)
+
+                    if len(el[path]) < idx:
+                        return None
+                    else:
+                        new_curr.append(el[path][idx])
+
+            elif path_el not in el:
                 return None
 
-            if len(curr[path]) < idx:
-                return None
+            else:
+                new_curr.append(el[path_el])
 
-            # TODO Handle idx is None
-            curr = curr[path][idx]
-
-        elif path_el not in curr:
-            return None
-
-        else:
-            curr = curr[path_el]
+            curr = new_curr
 
     if isinstance(curr, str):
         curr = curr.lower()
@@ -125,6 +135,16 @@ def get_value(json: dict, prop_path: str):
         curr = [evaluate(json, el) for el in curr]
 
     return curr
+
+
+def some(callback, arr: list) -> bool:
+    if isinstance(arr, list):
+        for el in arr:
+            if callback(el):
+                return True
+        return False
+
+    return arr
 
 
 PATH_REGEX = re.compile(r'^(\.[A-Za-z0-9]+(\[\d*\])?)+$')
@@ -150,53 +170,59 @@ def evaluate(json: dict, operator):
             if op == '-not':
                 param_0 = evaluate(json, params[0])
 
-                return not param_0
+                return some(lambda p: not p, param_0)
 
             if op == '-and':
                 param_0 = evaluate(json, params[0])
+                if some(lambda p: not p, param_0):
+                    return False
+
                 param_1 = evaluate(json, params[1])
 
-                return param_0 and param_1
+                return some(lambda p: p, param_1)
 
             if op == '-or':
                 param_0 = evaluate(json, params[0])
+                if some(lambda p: p, param_0):
+                    return True
+
                 param_1 = evaluate(json, params[1])
 
-                return param_0 or param_1
+                return some(lambda p: p, param_1)
 
             if op == '-ex':
                 param_0 = evaluate(json, params[0])
 
-                return param_0 is not None
+                return some(lambda p: p is not None, param_0)
 
             if op == '-nx':
                 param_0 = evaluate(json, params[0])
 
-                return param_0 is None
+                return some(lambda p: p is None, param_0)
 
             if op == '-in':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return param_0 in param_1
+                return some(lambda p: param_0 in p, param_1)
 
             if op == '-nn':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return param_0 not in param_1
+                return some(lambda p: param_0 not in p, param_1)
 
             if op == '-eq':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return param_0 == param_1
+                return some(lambda p: p == param_1, param_0)
 
             if op == '-ne':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return param_0 != param_1
+                return some(lambda p: p != param_1, param_0)
 
             if op == '-mt' or op == '-rx':
                 param_0 = evaluate(json, params[0])
@@ -208,31 +234,31 @@ def evaluate(json: dict, operator):
                 if param_1 is None:
                     raise InvalidPathOrExpression(params[1], 'Invalid regular expression')
 
-                return re.search(param_1, param_0) is not None
+                return some(lambda p: re.search(param_1, p) is not None, param_0)
 
             if op == '-lt':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return param_0 < param_1
+                return some(lambda p: p < param_1, param_0)
 
             if op == '-le':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return param_0 <= param_1
+                return some(lambda p: p <= param_1, param_0)
 
             if op == '-gt':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return param_0 > param_1
+                return some(lambda p: p > param_1, param_0)
 
             if op == '-ge':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return param_0 >= param_1
+                return some(lambda p: p >= param_1, param_0)
 
             if op == '-len':
                 param_0 = evaluate(json, params[0])
@@ -242,23 +268,23 @@ def evaluate(json: dict, operator):
             if op == '-obj':
                 param_0 = evaluate(json, params[0])
 
-                return isinstance(param_0, dict)
+                return some(lambda p: isinstance(p, dict), param_0)
 
             if op == '-arr':
                 param_0 = evaluate(json, params[0])
 
-                return isinstance(param_0, list)
+                return some(lambda p: isinstance(p, list), param_0)
 
             if op == '-str':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return isinstance(param_0, str)
+                return some(lambda p: isinstance(p, str), param_0)
 
             if op == '-num':
                 param_0 = evaluate(json, params[0])
 
-                return isinstance(params_0, int) or isinstance(params_0, float)
+                return some(lambda p: isinstance(p, int) or isinstance(p, float), param_0)
 
     return operator
 
