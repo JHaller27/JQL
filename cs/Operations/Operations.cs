@@ -102,7 +102,7 @@ namespace Operations
     {
         private string Arg { get; set; }
 
-        protected Primitive(string arg) : base()
+        public Primitive(string arg)
         {
             Arg = arg;
         }
@@ -125,7 +125,12 @@ namespace Operations
 
     abstract class Expression : Operation
     {
-        protected Operation[] Params { get; }
+        protected Operation[] Args { get; }
+
+        public Expression(Operation[] args)
+        {
+            Args = args;
+        }
 
         public override bool IsPrimitive()
         {

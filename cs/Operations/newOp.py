@@ -9,6 +9,8 @@ with open(PATH, "w") as fout:
 
 namespace Operations {{
     class {CLS_NAME} : Expression {{
+        public {CLS_NAME}(Operation[] args) : base(args) {{ }}
+
         public override int RequiredArgs()
         {{
             throw new NotImplementedException();
