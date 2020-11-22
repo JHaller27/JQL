@@ -96,6 +96,9 @@ namespace Operations
         {
             throw new InvalidOperationException("Operation cannot be evaluated as a boolean");
         }
+
+        // TODO Support EvaluateAsArray
+        // TODO Support EvaluateAsObject
     }
 
     abstract class Primitive : Operation
