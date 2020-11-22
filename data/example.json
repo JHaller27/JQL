@@ -1,0 +1,20 @@
+{
+    "First": "Jon",
+    "Last": "Snow",
+    "Age": 24,
+    "Titles": [
+        "King in the North",
+        "Crow",
+        "Bastard",
+        "Rightful King of Westeros"
+    ],
+    "Alive": true,
+    "Companions": [
+        {
+            "Type": "Dire Wolf",
+            "Name": "Ghost",
+            "Alive": true,
+            "AppearsIn": [1, 2, 3, 4, 5, 6, 8]
+        }
+    ]
+}
