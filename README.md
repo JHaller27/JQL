@@ -12,6 +12,8 @@ Table of Contents
     * [Or (or)](#or-or)
     * [Exists (ex)](#exists-ex)
     * [Not Exists (nx)](#not-exists-nx)
+    * [Contains (in)](#contains-in)
+    * [Not Contains (nn)](#not-contains-nn)
     * [Equals (eq)](#equals-eq)
     * [Matches (mt/rx)](#matches-mtrx)
     * [Less Than (lt)](#less-than-lt)
@@ -127,18 +129,18 @@ Resolves to true if `path` is undefined.
 
 ### Contains (in)
 
-Usage: `-in <path|expr> <param|expr>`
+Usage: `-in <param|expr> <path|expr>`
 
-Resolves to true if `path|expr` is contained in `param|expr`
+Resolves to true if `param|expr` is contained in `path|expr`
 
 
 ### Not Contains (nn)
 
-Usage: `-nn <path|expr> <param|expr>`
+Usage: `-nn <param|expr> <path|expr>`
 
-Equivalent to `-not -in <path|expr> <param|expr>`
+Equivalent to `-not -in <param|expr> <path|expr>`
 
-Resolves to true if `path|expr` is not contained in `param|expr`
+Resolves to true if `param|expr` is not contained in `path|expr`
 
 
 ### Equals (eq)
