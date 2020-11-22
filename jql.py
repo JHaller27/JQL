@@ -138,13 +138,15 @@ def get_value(json: dict, prop_path: str):
 
 
 def some(callback, arr: list) -> bool:
+    if isinstance(arr, bool):
+        return callback(arr)
+
     if isinstance(arr, list):
         for el in arr:
             if callback(el):
                 return True
-        return False
 
-    return arr
+    return False
 
 
 PATH_REGEX = re.compile(r'^(\.[A-Za-z0-9]+(\[\d*\])?)+$')
