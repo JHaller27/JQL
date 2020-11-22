@@ -1,0 +1,3498 @@
+{
+    "Product": {
+        "DisplaySkuAvailabilities": [
+            {
+                "Sku": {
+                    "LocalizedProperties": [
+                        {
+                            "Specifications": [
+                                {
+                                    "Name": "Screen size",
+                                    "Value": "12.3",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Weight",
+                                    "Value": "1.7",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Processor",
+                                    "Value": "Intel Core i3 10th Gen",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Hard drive size",
+                                    "Value": "128GB",
+                                    "ValueType": "String"
+                                }
+                            ],
+                            "Disclaimers": [],
+                            "SkuDescription": "Ultra-light and versatile. At your desk, on the couch, or in the yard, get more done your way with Surface Pro 7, featuring a laptop-class Intel® Core™ processor, all-day battery,¹ and HD cameras.",
+                            "SkuTitle": "Surface Pro 7 - Platinum, Intel Core i3, 4GB, 128GB",
+                            "SkuButtonTitle": "Platinum, Intel Core i3, 4GB, 128GB",
+                            "DeliveryDateOverlay": "",
+                            "SkuDisplayRank": [],
+                            "TextResources": [],
+                            "Images": [
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "tile",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                },
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "screenshot",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                }
+                            ],
+                            "Language": "en-us",
+                            "Markets": [
+                                "US"
+                            ]
+                        }
+                    ],
+                    "MarketProperties": [
+                        {
+                            "Distributors": [],
+                            "ConfigurationReferences": [
+                                {
+                                    "Key": "color",
+                                    "Value": "86888a"
+                                },
+                                {
+                                    "Key": "processor",
+                                    "Value": "Corei3"
+                                },
+                                {
+                                    "Key": "memory",
+                                    "Value": "4GB"
+                                },
+                                {
+                                    "Key": "storage",
+                                    "Value": "128GB"
+                                }
+                            ],
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Markets": [
+                                "US"
+                            ],
+                            "SupportedLanguages": [
+                                "neutral",
+                                "en-us",
+                                "es-us"
+                            ],
+                            "TokenMintSources": null
+                        }
+                    ],
+                    "Properties": {
+                        "ExternalSource": {
+                            "Name": "fa52f498-8fca-4ca2-8173-15e1140b519a",
+                            "Id": "VDH-00001"
+                        },
+                        "Dimensions": {
+                            "Length": 0.0,
+                            "Width": 0.0,
+                            "Height": 0.0,
+                            "Weight": 4.7365,
+                            "SystemOfMeasurement": "U.S. Customary"
+                        },
+                        "Distributions": {},
+                        "IsPreOrder": false,
+                        "IsBundle": false,
+                        "IsTrial": false,
+                        "SkuDisplayRank": 0,
+                        "InventoryControlSkuId": "VDH-00001",
+                        "AdditionalIdentifiers": [],
+                        "LastUpdateDate": "",
+                        "VisibleToB2BServiceIds": [],
+                        "BillOnPurchase": null,
+                        "ConversionPaths": null,
+                        "AssetLifecycleData": null
+                    },
+                    "LastModifiedDate": "2019-07-23T17:29:30.4439919Z",
+                    "ProductId": "8N17J0M5ZZQS",
+                    "SkuASchema": "SKU;3",
+                    "SkuBSchema": "SkuDevice;3",
+                    "SkuId": "7GKZ",
+                    "SkuType": "Full"
+                },
+                "Availabilities": [
+                    {
+                        "Actions": [
+                            "Browse",
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8WPJ1DL482N9",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-08-04T18:50:36.7797681Z"
+                        },
+                        "DisplayRank": 0,
+                        "LastModifiedDate": "2020-08-04T18:50:37Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 749.99,
+                                "MSRP": 749.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": []
+                        },
+                        "RemediationRequired": false,
+                        "SkuId": "7GKZ",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    },
+                    {
+                        "Actions": [
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8VXPP933W4GV",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-08-04T18:50:36.7797681Z"
+                        },
+                        "DisplayRank": 1,
+                        "LastModifiedDate": "2020-08-04T18:50:37Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 674.99,
+                                "MSRP": 749.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": [
+                                "LowbarDiscount"
+                            ]
+                        },
+                        "RemediationRequired": true,
+                        "Remediations": [
+                            {
+                                "RemediationId": "LowbarDiscountRemediation",
+                                "Type": "Redirect",
+                                "Url": " https://www.microsoft.com/{0}/store/r/student-discounts"
+                            }
+                        ],
+                        "SkuId": "7GKZ",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    }
+                ]
+            },
+            {
+                "Sku": {
+                    "LocalizedProperties": [
+                        {
+                            "Specifications": [
+                                {
+                                    "Name": "Screen size",
+                                    "Value": "12.3",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Weight",
+                                    "Value": "1.7",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Processor",
+                                    "Value": "Intel Core i5 10th Gen",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Hard drive size",
+                                    "Value": "128GB",
+                                    "ValueType": "String"
+                                }
+                            ],
+                            "Disclaimers": [],
+                            "SkuDescription": "Ultra-light and versatile. At your desk, on the couch, or in the yard, get more done your way with Surface Pro 7, featuring a laptop-class Intel® Core™ processor, all-day battery,¹ and HD cameras.",
+                            "SkuTitle": "Surface Pro 7 - Platinum, Intel Core i5, 8GB, 128GB",
+                            "SkuButtonTitle": "Platinum, Intel Core i5, 8GB, 128GB",
+                            "DeliveryDateOverlay": "",
+                            "SkuDisplayRank": [],
+                            "TextResources": [],
+                            "Images": [
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "tile",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                },
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "screenshot",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                }
+                            ],
+                            "Language": "en-us",
+                            "Markets": [
+                                "US"
+                            ]
+                        }
+                    ],
+                    "MarketProperties": [
+                        {
+                            "Distributors": [],
+                            "ConfigurationReferences": [
+                                {
+                                    "Key": "color",
+                                    "Value": "86888a"
+                                },
+                                {
+                                    "Key": "processor",
+                                    "Value": "Corei5"
+                                },
+                                {
+                                    "Key": "memory",
+                                    "Value": "8GB"
+                                },
+                                {
+                                    "Key": "storage",
+                                    "Value": "128GB"
+                                }
+                            ],
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Markets": [
+                                "US"
+                            ],
+                            "SupportedLanguages": [
+                                "neutral",
+                                "en-us",
+                                "es-us"
+                            ],
+                            "TokenMintSources": null
+                        }
+                    ],
+                    "Properties": {
+                        "ExternalSource": {
+                            "Name": "fa52f498-8fca-4ca2-8173-15e1140b519a",
+                            "Id": "VDV-00001"
+                        },
+                        "Dimensions": {
+                            "Length": 0.0,
+                            "Width": 0.0,
+                            "Height": 0.0,
+                            "Weight": 4.7393,
+                            "SystemOfMeasurement": "U.S. Customary"
+                        },
+                        "Distributions": {},
+                        "IsPreOrder": false,
+                        "IsBundle": false,
+                        "IsTrial": false,
+                        "SkuDisplayRank": 1,
+                        "InventoryControlSkuId": "VDV-00001",
+                        "AdditionalIdentifiers": [],
+                        "LastUpdateDate": "",
+                        "VisibleToB2BServiceIds": [],
+                        "BillOnPurchase": null,
+                        "ConversionPaths": null,
+                        "AssetLifecycleData": null
+                    },
+                    "LastModifiedDate": "2019-07-23T17:29:30.4439919Z",
+                    "ProductId": "8N17J0M5ZZQS",
+                    "SkuASchema": "SKU;3",
+                    "SkuBSchema": "SkuDevice;3",
+                    "SkuId": "08ZH",
+                    "SkuType": "Full"
+                },
+                "Availabilities": [
+                    {
+                        "Actions": [
+                            "Browse",
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8WRD8VXT2P6C",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-20T17:12:18.8660008Z"
+                        },
+                        "DisplayRank": 0,
+                        "LastModifiedDate": "2020-11-20T17:12:19Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 899.99,
+                                "MSRP": 899.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": []
+                        },
+                        "RemediationRequired": false,
+                        "SkuId": "08ZH",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    },
+                    {
+                        "Actions": [
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8VZ55Q44G01V",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-20T17:12:18.8660008Z"
+                        },
+                        "DisplayRank": 1,
+                        "LastModifiedDate": "2020-11-20T17:12:19Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 809.99,
+                                "MSRP": 899.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": [
+                                "LowbarDiscount"
+                            ]
+                        },
+                        "RemediationRequired": true,
+                        "Remediations": [
+                            {
+                                "RemediationId": "LowbarDiscountRemediation",
+                                "Type": "Redirect",
+                                "Url": " https://www.microsoft.com/{0}/store/r/student-discounts"
+                            }
+                        ],
+                        "SkuId": "08ZH",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    }
+                ]
+            },
+            {
+                "Sku": {
+                    "LocalizedProperties": [
+                        {
+                            "Specifications": [
+                                {
+                                    "Name": "Screen size",
+                                    "Value": "12.3",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Weight",
+                                    "Value": "1.7",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Processor",
+                                    "Value": "Intel Core i5 10th Gen",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Hard drive size",
+                                    "Value": "256GB",
+                                    "ValueType": "String"
+                                }
+                            ],
+                            "Disclaimers": [],
+                            "SkuDescription": "Ultra-light and versatile. At your desk, on the couch, or in the yard, get more done your way with Surface Pro 7, featuring a laptop-class Intel® Core™ processor, all-day battery,¹ and HD cameras.",
+                            "SkuTitle": "Surface Pro 7 - Platinum, Intel Core i5, 8GB, 256GB",
+                            "SkuButtonTitle": "Platinum, Intel Core i5, 8GB, 256GB",
+                            "DeliveryDateOverlay": "",
+                            "SkuDisplayRank": [],
+                            "TextResources": [],
+                            "Images": [
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "tile",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                },
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "screenshot",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                }
+                            ],
+                            "Language": "en-us",
+                            "Markets": [
+                                "US"
+                            ]
+                        }
+                    ],
+                    "MarketProperties": [
+                        {
+                            "Distributors": [],
+                            "ConfigurationReferences": [
+                                {
+                                    "Key": "color",
+                                    "Value": "86888a"
+                                },
+                                {
+                                    "Key": "processor",
+                                    "Value": "Corei5"
+                                },
+                                {
+                                    "Key": "memory",
+                                    "Value": "8GB"
+                                },
+                                {
+                                    "Key": "storage",
+                                    "Value": "256GB"
+                                }
+                            ],
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Markets": [
+                                "US"
+                            ],
+                            "SupportedLanguages": [
+                                "neutral",
+                                "en-us",
+                                "es-us"
+                            ],
+                            "TokenMintSources": null
+                        }
+                    ],
+                    "Properties": {
+                        "ExternalSource": {
+                            "Name": "fa52f498-8fca-4ca2-8173-15e1140b519a",
+                            "Id": "PUV-00001"
+                        },
+                        "Dimensions": {
+                            "Length": 0.0,
+                            "Width": 0.0,
+                            "Height": 0.0,
+                            "Weight": 4.7393,
+                            "SystemOfMeasurement": "U.S. Customary"
+                        },
+                        "Distributions": {},
+                        "IsPreOrder": false,
+                        "IsBundle": false,
+                        "IsTrial": false,
+                        "SkuDisplayRank": 2,
+                        "InventoryControlSkuId": "PUV-00001",
+                        "AdditionalIdentifiers": [],
+                        "LastUpdateDate": "",
+                        "VisibleToB2BServiceIds": [],
+                        "BillOnPurchase": null,
+                        "ConversionPaths": null,
+                        "AssetLifecycleData": null
+                    },
+                    "LastModifiedDate": "2019-07-23T17:29:29.3970989Z",
+                    "ProductId": "8N17J0M5ZZQS",
+                    "SkuASchema": "SKU;3",
+                    "SkuBSchema": "SkuDevice;3",
+                    "SkuId": "53NW",
+                    "SkuType": "Full"
+                },
+                "Availabilities": [
+                    {
+                        "Actions": [
+                            "Browse",
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8WT8XDNKB7KZ",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2023-01-01T07:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-17T18:05:32.8353095Z"
+                        },
+                        "DisplayRank": 0,
+                        "LastModifiedDate": "2020-11-17T18:05:33Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 1199.99,
+                                "MSRP": 1199.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": []
+                        },
+                        "RemediationRequired": false,
+                        "SkuId": "53NW",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    }
+                ]
+            },
+            {
+                "Sku": {
+                    "LocalizedProperties": [
+                        {
+                            "Specifications": [
+                                {
+                                    "Name": "Screen size",
+                                    "Value": "12.3",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Weight",
+                                    "Value": "1.7",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Processor",
+                                    "Value": "Intel Core i5 10th Gen",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Hard drive size",
+                                    "Value": "256GB",
+                                    "ValueType": "String"
+                                }
+                            ],
+                            "Disclaimers": [],
+                            "SkuDescription": "Ultra-light and versatile. At your desk, on the couch, or in the yard, get more done your way with Surface Pro 7, featuring a laptop-class Intel® Core™ processor, all-day battery,¹ and HD cameras.",
+                            "SkuTitle": "Surface Pro 7 - Black, Intel Core i5, 8GB, 256GB",
+                            "SkuButtonTitle": "Black, Intel Core i5, 8GB, 256GB",
+                            "DeliveryDateOverlay": "",
+                            "SkuDisplayRank": [],
+                            "TextResources": [],
+                            "Images": [
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in black, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2577509,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "tile",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tf03?ver=cf8b",
+                                    "Width": 3000
+                                },
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in black, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2577509,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "screenshot",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tf03?ver=cf8b",
+                                    "Width": 3000
+                                }
+                            ],
+                            "Language": "en-us",
+                            "Markets": [
+                                "US"
+                            ]
+                        }
+                    ],
+                    "MarketProperties": [
+                        {
+                            "Distributors": [],
+                            "ConfigurationReferences": [
+                                {
+                                    "Key": "color",
+                                    "Value": "000000"
+                                },
+                                {
+                                    "Key": "processor",
+                                    "Value": "Corei5"
+                                },
+                                {
+                                    "Key": "memory",
+                                    "Value": "8GB"
+                                },
+                                {
+                                    "Key": "storage",
+                                    "Value": "256GB"
+                                }
+                            ],
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Markets": [
+                                "US"
+                            ],
+                            "SupportedLanguages": [
+                                "neutral",
+                                "en-us",
+                                "es-us"
+                            ],
+                            "TokenMintSources": null
+                        }
+                    ],
+                    "Properties": {
+                        "ExternalSource": {
+                            "Name": "fa52f498-8fca-4ca2-8173-15e1140b519a",
+                            "Id": "PUV-00016"
+                        },
+                        "Dimensions": {
+                            "Length": 0.0,
+                            "Width": 0.0,
+                            "Height": 0.0,
+                            "Weight": 4.7393,
+                            "SystemOfMeasurement": "U.S. Customary"
+                        },
+                        "Distributions": {},
+                        "IsPreOrder": false,
+                        "IsBundle": false,
+                        "IsTrial": false,
+                        "SkuDisplayRank": 3,
+                        "InventoryControlSkuId": "PUV-00016",
+                        "AdditionalIdentifiers": [],
+                        "LastUpdateDate": "",
+                        "VisibleToB2BServiceIds": [],
+                        "BillOnPurchase": null,
+                        "ConversionPaths": null,
+                        "AssetLifecycleData": null
+                    },
+                    "LastModifiedDate": "2019-07-23T17:29:29.4127430Z",
+                    "ProductId": "8N17J0M5ZZQS",
+                    "SkuASchema": "SKU;3",
+                    "SkuBSchema": "SkuDevice;3",
+                    "SkuId": "KMF5",
+                    "SkuType": "Full"
+                },
+                "Availabilities": [
+                    {
+                        "Actions": [
+                            "Browse",
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8W3NBTQ0K14W",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2020-12-07T04:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-17T18:05:32.8353095Z"
+                        },
+                        "DisplayRank": 0,
+                        "LastModifiedDate": "2020-11-17T18:05:34Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 1109.0,
+                                "MSRP": 1199.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": []
+                        },
+                        "RemediationRequired": false,
+                        "SkuId": "KMF5",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    }
+                ]
+            },
+            {
+                "Sku": {
+                    "LocalizedProperties": [
+                        {
+                            "Specifications": [
+                                {
+                                    "Name": "Screen size",
+                                    "Value": "12.3",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Weight",
+                                    "Value": "1.7",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Processor",
+                                    "Value": "Intel Core i5 10th Gen",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Hard drive size",
+                                    "Value": "256GB",
+                                    "ValueType": "String"
+                                }
+                            ],
+                            "Disclaimers": [],
+                            "SkuDescription": "Ultra-light and versatile. At your desk, on the couch, or in the yard, get more done your way with Surface Pro 7, featuring a laptop-class Intel® Core™ processor, all-day battery,¹ and HD cameras.",
+                            "SkuTitle": "Surface Pro 7 - Platinum, Intel Core i5, 16GB, 256GB",
+                            "SkuButtonTitle": "Platinum, Intel Core i5, 16GB, 256GB",
+                            "DeliveryDateOverlay": "",
+                            "SkuDisplayRank": [],
+                            "TextResources": [],
+                            "Images": [
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "tile",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                },
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "screenshot",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                }
+                            ],
+                            "Language": "en-us",
+                            "Markets": [
+                                "US"
+                            ]
+                        }
+                    ],
+                    "MarketProperties": [
+                        {
+                            "Distributors": [],
+                            "ConfigurationReferences": [
+                                {
+                                    "Key": "color",
+                                    "Value": "86888a"
+                                },
+                                {
+                                    "Key": "processor",
+                                    "Value": "Corei5"
+                                },
+                                {
+                                    "Key": "memory",
+                                    "Value": "16GB"
+                                },
+                                {
+                                    "Key": "storage",
+                                    "Value": "256GB"
+                                }
+                            ],
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Markets": [
+                                "US"
+                            ],
+                            "SupportedLanguages": [
+                                "neutral",
+                                "en-us",
+                                "es-us"
+                            ],
+                            "TokenMintSources": null
+                        }
+                    ],
+                    "Properties": {
+                        "ExternalSource": {
+                            "Name": "fa52f498-8fca-4ca2-8173-15e1140b519a",
+                            "Id": "PUW-00001"
+                        },
+                        "Dimensions": {
+                            "Length": 0.0,
+                            "Width": 0.0,
+                            "Height": 0.0,
+                            "Weight": 4.7393,
+                            "SystemOfMeasurement": "U.S. Customary"
+                        },
+                        "Distributions": {},
+                        "IsPreOrder": false,
+                        "IsBundle": false,
+                        "IsTrial": false,
+                        "SkuDisplayRank": 4,
+                        "InventoryControlSkuId": "PUW-00001",
+                        "AdditionalIdentifiers": [],
+                        "LastUpdateDate": "",
+                        "VisibleToB2BServiceIds": [],
+                        "BillOnPurchase": null,
+                        "ConversionPaths": null,
+                        "AssetLifecycleData": null
+                    },
+                    "LastModifiedDate": "2019-07-23T17:29:29.4127430Z",
+                    "ProductId": "8N17J0M5ZZQS",
+                    "SkuASchema": "SKU;3",
+                    "SkuBSchema": "SkuDevice;3",
+                    "SkuId": "H9HB",
+                    "SkuType": "Full"
+                },
+                "Availabilities": [
+                    {
+                        "Actions": [
+                            "Browse",
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8WGJNVK578KH",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-17T18:05:32.8353095Z"
+                        },
+                        "DisplayRank": 0,
+                        "LastModifiedDate": "2020-11-17T18:05:33Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 1399.99,
+                                "MSRP": 1399.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": []
+                        },
+                        "RemediationRequired": false,
+                        "SkuId": "H9HB",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    },
+                    {
+                        "Actions": [
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8WP3WGH98VWP",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-17T18:05:32.8353095Z"
+                        },
+                        "DisplayRank": 1,
+                        "LastModifiedDate": "2020-11-17T18:05:33Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 1259.99,
+                                "MSRP": 1399.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": [
+                                "LowbarDiscount"
+                            ]
+                        },
+                        "RemediationRequired": true,
+                        "Remediations": [
+                            {
+                                "RemediationId": "LowbarDiscountRemediation",
+                                "Type": "Redirect",
+                                "Url": " https://www.microsoft.com/{0}/store/r/student-discounts"
+                            }
+                        ],
+                        "SkuId": "H9HB",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    }
+                ]
+            },
+            {
+                "Sku": {
+                    "LocalizedProperties": [
+                        {
+                            "Specifications": [
+                                {
+                                    "Name": "Screen size",
+                                    "Value": "12.3",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Weight",
+                                    "Value": "1.74",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Processor",
+                                    "Value": "Intel Core i7 10th Gen",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Hard drive size",
+                                    "Value": "256GB",
+                                    "ValueType": "String"
+                                }
+                            ],
+                            "Disclaimers": [],
+                            "SkuDescription": "Ultra-light and versatile. At your desk, on the couch, or in the yard, get more done your way with Surface Pro 7, featuring a laptop-class Intel® Core™ processor, all-day battery,¹ and HD cameras.",
+                            "SkuTitle": "Surface Pro 7 - Platinum, Intel Core i7, 16GB, 256GB",
+                            "SkuButtonTitle": "Platinum, Intel Core i7, 16GB, 256GB",
+                            "DeliveryDateOverlay": "",
+                            "SkuDisplayRank": [],
+                            "TextResources": [],
+                            "Images": [
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "tile",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                },
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "screenshot",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                }
+                            ],
+                            "Language": "en-us",
+                            "Markets": [
+                                "US"
+                            ]
+                        }
+                    ],
+                    "MarketProperties": [
+                        {
+                            "Distributors": [],
+                            "ConfigurationReferences": [
+                                {
+                                    "Key": "color",
+                                    "Value": "86888a"
+                                },
+                                {
+                                    "Key": "processor",
+                                    "Value": "Corei7"
+                                },
+                                {
+                                    "Key": "memory",
+                                    "Value": "16GB"
+                                },
+                                {
+                                    "Key": "storage",
+                                    "Value": "256GB"
+                                }
+                            ],
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Markets": [
+                                "US"
+                            ],
+                            "SupportedLanguages": [
+                                "neutral",
+                                "en-us",
+                                "es-us"
+                            ],
+                            "TokenMintSources": null
+                        }
+                    ],
+                    "Properties": {
+                        "ExternalSource": {
+                            "Name": "fa52f498-8fca-4ca2-8173-15e1140b519a",
+                            "Id": "VNX-00001"
+                        },
+                        "Dimensions": {
+                            "Length": 0.0,
+                            "Width": 0.0,
+                            "Height": 0.0,
+                            "Weight": 4.757,
+                            "SystemOfMeasurement": "U.S. Customary"
+                        },
+                        "Distributions": {},
+                        "IsPreOrder": false,
+                        "IsBundle": false,
+                        "IsTrial": false,
+                        "SkuDisplayRank": 5,
+                        "InventoryControlSkuId": "VNX-00001",
+                        "AdditionalIdentifiers": [],
+                        "LastUpdateDate": "",
+                        "VisibleToB2BServiceIds": [],
+                        "BillOnPurchase": null,
+                        "ConversionPaths": null,
+                        "AssetLifecycleData": null
+                    },
+                    "LastModifiedDate": "2019-07-23T17:29:30.7721417Z",
+                    "ProductId": "8N17J0M5ZZQS",
+                    "SkuASchema": "SKU;3",
+                    "SkuBSchema": "SkuDevice;3",
+                    "SkuId": "6SQD",
+                    "SkuType": "Full"
+                },
+                "Availabilities": [
+                    {
+                        "Actions": [
+                            "Browse",
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8VZNBRFWC1DC",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-17T18:05:32.8353095Z"
+                        },
+                        "DisplayRank": 0,
+                        "LastModifiedDate": "2020-11-17T18:05:33Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 1499.99,
+                                "MSRP": 1499.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": []
+                        },
+                        "RemediationRequired": false,
+                        "SkuId": "6SQD",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    },
+                    {
+                        "Actions": [
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8WJVKRD15PMB",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-17T18:05:32.8353095Z"
+                        },
+                        "DisplayRank": 1,
+                        "LastModifiedDate": "2020-11-17T18:05:33Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 1349.99,
+                                "MSRP": 1499.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": [
+                                "LowbarDiscount"
+                            ]
+                        },
+                        "RemediationRequired": true,
+                        "Remediations": [
+                            {
+                                "RemediationId": "LowbarDiscountRemediation",
+                                "Type": "Redirect",
+                                "Url": " https://www.microsoft.com/{0}/store/r/student-discounts"
+                            }
+                        ],
+                        "SkuId": "6SQD",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    }
+                ]
+            },
+            {
+                "Sku": {
+                    "LocalizedProperties": [
+                        {
+                            "Specifications": [
+                                {
+                                    "Name": "Screen size",
+                                    "Value": "12.3",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Weight",
+                                    "Value": "1.7",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Processor",
+                                    "Value": "Intel Core i7 10th Gen",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Hard drive size",
+                                    "Value": "256GB",
+                                    "ValueType": "String"
+                                }
+                            ],
+                            "Disclaimers": [],
+                            "SkuDescription": "Ultra-light and versatile. At your desk, on the couch, or in the yard, get more done your way with Surface Pro 7, featuring a laptop-class Intel® Core™ processor, all-day battery,¹ and HD cameras.",
+                            "SkuTitle": "Surface Pro 7 - Black, Intel Core i7, 16GB, 256GB",
+                            "SkuButtonTitle": "Black, Intel Core i7, 16GB, 256GB",
+                            "DeliveryDateOverlay": "",
+                            "SkuDisplayRank": [],
+                            "TextResources": [],
+                            "Images": [
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in black, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2577509,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "tile",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tf03?ver=cf8b",
+                                    "Width": 3000
+                                },
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in black, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2577509,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "screenshot",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tf03?ver=cf8b",
+                                    "Width": 3000
+                                }
+                            ],
+                            "Language": "en-us",
+                            "Markets": [
+                                "US"
+                            ]
+                        }
+                    ],
+                    "MarketProperties": [
+                        {
+                            "Distributors": [],
+                            "ConfigurationReferences": [
+                                {
+                                    "Key": "color",
+                                    "Value": "000000"
+                                },
+                                {
+                                    "Key": "processor",
+                                    "Value": "Corei7"
+                                },
+                                {
+                                    "Key": "memory",
+                                    "Value": "16GB"
+                                },
+                                {
+                                    "Key": "storage",
+                                    "Value": "256GB"
+                                }
+                            ],
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Markets": [
+                                "US"
+                            ],
+                            "SupportedLanguages": [
+                                "neutral",
+                                "en-us",
+                                "es-us"
+                            ],
+                            "TokenMintSources": null
+                        }
+                    ],
+                    "Properties": {
+                        "ExternalSource": {
+                            "Name": "fa52f498-8fca-4ca2-8173-15e1140b519a",
+                            "Id": "VNX-00016"
+                        },
+                        "Dimensions": {
+                            "Length": 0.0,
+                            "Width": 0.0,
+                            "Height": 0.0,
+                            "Weight": 4.757,
+                            "SystemOfMeasurement": "U.S. Customary"
+                        },
+                        "Distributions": {},
+                        "IsPreOrder": false,
+                        "IsBundle": false,
+                        "IsTrial": false,
+                        "SkuDisplayRank": 6,
+                        "InventoryControlSkuId": "VNX-00016",
+                        "AdditionalIdentifiers": [],
+                        "LastUpdateDate": "",
+                        "VisibleToB2BServiceIds": [],
+                        "BillOnPurchase": null,
+                        "ConversionPaths": null,
+                        "AssetLifecycleData": null
+                    },
+                    "LastModifiedDate": "2019-07-23T17:29:30.7721417Z",
+                    "ProductId": "8N17J0M5ZZQS",
+                    "SkuASchema": "SKU;3",
+                    "SkuBSchema": "SkuDevice;3",
+                    "SkuId": "JTX3",
+                    "SkuType": "Full"
+                },
+                "Availabilities": [
+                    {
+                        "Actions": [
+                            "Browse",
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8W153BNH5C0Q",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-17T18:05:32.8353095Z"
+                        },
+                        "DisplayRank": 0,
+                        "LastModifiedDate": "2020-11-17T18:05:34Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 1499.99,
+                                "MSRP": 1499.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": []
+                        },
+                        "RemediationRequired": false,
+                        "SkuId": "JTX3",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    },
+                    {
+                        "Actions": [
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8WLM32K17PHB",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-17T18:05:32.8353095Z"
+                        },
+                        "DisplayRank": 1,
+                        "LastModifiedDate": "2020-11-17T18:05:34Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 1349.99,
+                                "MSRP": 1499.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": [
+                                "LowbarDiscount"
+                            ]
+                        },
+                        "RemediationRequired": true,
+                        "Remediations": [
+                            {
+                                "RemediationId": "LowbarDiscountRemediation",
+                                "Type": "Redirect",
+                                "Url": " https://www.microsoft.com/{0}/store/r/student-discounts"
+                            }
+                        ],
+                        "SkuId": "JTX3",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    }
+                ]
+            },
+            {
+                "Sku": {
+                    "LocalizedProperties": [
+                        {
+                            "Specifications": [
+                                {
+                                    "Name": "Screen size",
+                                    "Value": "12.3",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Weight",
+                                    "Value": "1.74",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Processor",
+                                    "Value": "Intel Core i7 10th Gen",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Hard drive size",
+                                    "Value": "512GB",
+                                    "ValueType": "String"
+                                }
+                            ],
+                            "Disclaimers": [],
+                            "SkuDescription": "Ultra-light and versatile. At your desk, on the couch, or in the yard, get more done your way with Surface Pro 7, featuring a laptop-class Intel® Core™ processor, all-day battery,¹ and HD cameras.",
+                            "SkuTitle": "Surface Pro 7 - Platinum, Intel Core i7, 16GB, 512GB",
+                            "SkuButtonTitle": "Platinum, Intel Core i7, 16GB, 512GB",
+                            "DeliveryDateOverlay": "",
+                            "SkuDisplayRank": [],
+                            "TextResources": [],
+                            "Images": [
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "tile",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                },
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "screenshot",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                }
+                            ],
+                            "Language": "en-us",
+                            "Markets": [
+                                "US"
+                            ]
+                        }
+                    ],
+                    "MarketProperties": [
+                        {
+                            "Distributors": [],
+                            "ConfigurationReferences": [
+                                {
+                                    "Key": "color",
+                                    "Value": "86888a"
+                                },
+                                {
+                                    "Key": "processor",
+                                    "Value": "Corei7"
+                                },
+                                {
+                                    "Key": "memory",
+                                    "Value": "16GB"
+                                },
+                                {
+                                    "Key": "storage",
+                                    "Value": "512GB"
+                                }
+                            ],
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Markets": [
+                                "US"
+                            ],
+                            "SupportedLanguages": [
+                                "neutral",
+                                "en-us",
+                                "es-us"
+                            ],
+                            "TokenMintSources": null
+                        }
+                    ],
+                    "Properties": {
+                        "ExternalSource": {
+                            "Name": "fa52f498-8fca-4ca2-8173-15e1140b519a",
+                            "Id": "VAT-00001"
+                        },
+                        "Dimensions": {
+                            "Length": 0.0,
+                            "Width": 0.0,
+                            "Height": 0.0,
+                            "Weight": 4.757,
+                            "SystemOfMeasurement": "U.S. Customary"
+                        },
+                        "Distributions": {},
+                        "IsPreOrder": false,
+                        "IsBundle": false,
+                        "IsTrial": false,
+                        "SkuDisplayRank": 7,
+                        "InventoryControlSkuId": "VAT-00001",
+                        "AdditionalIdentifiers": [],
+                        "LastUpdateDate": "",
+                        "VisibleToB2BServiceIds": [],
+                        "BillOnPurchase": null,
+                        "ConversionPaths": null,
+                        "AssetLifecycleData": null
+                    },
+                    "LastModifiedDate": "2019-07-23T17:29:30.4127573Z",
+                    "ProductId": "8N17J0M5ZZQS",
+                    "SkuASchema": "SKU;3",
+                    "SkuBSchema": "SkuDevice;3",
+                    "SkuId": "4MHN",
+                    "SkuType": "Full"
+                },
+                "Availabilities": [
+                    {
+                        "Actions": [
+                            "Browse",
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8WK9XK9NVP7D",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-17T18:05:32.8353095Z"
+                        },
+                        "DisplayRank": 0,
+                        "LastModifiedDate": "2020-11-17T18:05:33Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 1899.99,
+                                "MSRP": 1899.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": []
+                        },
+                        "RemediationRequired": false,
+                        "SkuId": "4MHN",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    },
+                    {
+                        "Actions": [
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8WGX4X4430F2",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-17T18:05:32.8353095Z"
+                        },
+                        "DisplayRank": 1,
+                        "LastModifiedDate": "2020-11-17T18:05:33Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 1709.99,
+                                "MSRP": 1899.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": [
+                                "LowbarDiscount"
+                            ]
+                        },
+                        "RemediationRequired": true,
+                        "Remediations": [
+                            {
+                                "RemediationId": "LowbarDiscountRemediation",
+                                "Type": "Redirect",
+                                "Url": " https://www.microsoft.com/{0}/store/r/student-discounts"
+                            }
+                        ],
+                        "SkuId": "4MHN",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    }
+                ]
+            },
+            {
+                "Sku": {
+                    "LocalizedProperties": [
+                        {
+                            "Specifications": [
+                                {
+                                    "Name": "Screen size",
+                                    "Value": "12.3",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Weight",
+                                    "Value": "1.74",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Processor",
+                                    "Value": "Intel Core i7 10th Gen",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Hard drive size",
+                                    "Value": "512GB",
+                                    "ValueType": "String"
+                                }
+                            ],
+                            "Disclaimers": [],
+                            "SkuDescription": "Ultra-light and versatile. At your desk, on the couch, or in the yard, get more done your way with Surface Pro 7, featuring a laptop-class Intel® Core™ processor, all-day battery,¹ and HD cameras.",
+                            "SkuTitle": "Surface Pro 7 - Black, Intel Core i7, 16GB, 512GB",
+                            "SkuButtonTitle": "Black, Intel Core i7, 16GB, 512GB",
+                            "DeliveryDateOverlay": "",
+                            "SkuDisplayRank": [],
+                            "TextResources": [],
+                            "Images": [
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in black, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2577509,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "tile",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tf03?ver=cf8b",
+                                    "Width": 3000
+                                },
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in black, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2577509,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "screenshot",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tf03?ver=cf8b",
+                                    "Width": 3000
+                                }
+                            ],
+                            "Language": "en-us",
+                            "Markets": [
+                                "US"
+                            ]
+                        }
+                    ],
+                    "MarketProperties": [
+                        {
+                            "Distributors": [],
+                            "ConfigurationReferences": [
+                                {
+                                    "Key": "color",
+                                    "Value": "000000"
+                                },
+                                {
+                                    "Key": "processor",
+                                    "Value": "Corei7"
+                                },
+                                {
+                                    "Key": "memory",
+                                    "Value": "16GB"
+                                },
+                                {
+                                    "Key": "storage",
+                                    "Value": "512GB"
+                                }
+                            ],
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Markets": [
+                                "US"
+                            ],
+                            "SupportedLanguages": [
+                                "neutral",
+                                "en-us",
+                                "es-us"
+                            ],
+                            "TokenMintSources": null
+                        }
+                    ],
+                    "Properties": {
+                        "ExternalSource": {
+                            "Name": "fa52f498-8fca-4ca2-8173-15e1140b519a",
+                            "Id": "VAT-00016"
+                        },
+                        "Dimensions": {
+                            "Length": 0.0,
+                            "Width": 0.0,
+                            "Height": 0.0,
+                            "Weight": 4.757,
+                            "SystemOfMeasurement": "U.S. Customary"
+                        },
+                        "Distributions": {},
+                        "IsPreOrder": false,
+                        "IsBundle": false,
+                        "IsTrial": false,
+                        "SkuDisplayRank": 8,
+                        "InventoryControlSkuId": "VAT-00016",
+                        "AdditionalIdentifiers": [],
+                        "LastUpdateDate": "",
+                        "VisibleToB2BServiceIds": [],
+                        "BillOnPurchase": null,
+                        "ConversionPaths": null,
+                        "AssetLifecycleData": null
+                    },
+                    "LastModifiedDate": "2019-07-23T17:29:30.4283748Z",
+                    "ProductId": "8N17J0M5ZZQS",
+                    "SkuASchema": "SKU;3",
+                    "SkuBSchema": "SkuDevice;3",
+                    "SkuId": "65S0",
+                    "SkuType": "Full"
+                },
+                "Availabilities": [
+                    {
+                        "Actions": [
+                            "Browse",
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8WHJDKCHWJ88",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-20T17:12:18.8660008Z"
+                        },
+                        "DisplayRank": 0,
+                        "LastModifiedDate": "2020-11-20T17:12:19Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 1899.99,
+                                "MSRP": 1899.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": []
+                        },
+                        "RemediationRequired": false,
+                        "SkuId": "65S0",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    },
+                    {
+                        "Actions": [
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8VZBV12XK21W",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-17T18:05:32.8353095Z"
+                        },
+                        "DisplayRank": 1,
+                        "LastModifiedDate": "2020-11-17T18:05:33Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 1709.99,
+                                "MSRP": 1899.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": [
+                                "LowbarDiscount"
+                            ]
+                        },
+                        "RemediationRequired": true,
+                        "Remediations": [
+                            {
+                                "RemediationId": "LowbarDiscountRemediation",
+                                "Type": "Redirect",
+                                "Url": " https://www.microsoft.com/{0}/store/r/student-discounts"
+                            }
+                        ],
+                        "SkuId": "65S0",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    }
+                ]
+            },
+            {
+                "Sku": {
+                    "LocalizedProperties": [
+                        {
+                            "Specifications": [
+                                {
+                                    "Name": "Screen size",
+                                    "Value": "12.3",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Weight",
+                                    "Value": "1.74",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Processor",
+                                    "Value": "Intel Core i7 10th Gen",
+                                    "ValueType": "String"
+                                },
+                                {
+                                    "Name": "Hard drive size",
+                                    "Value": "1TB",
+                                    "ValueType": "String"
+                                }
+                            ],
+                            "Disclaimers": [],
+                            "SkuDescription": "Ultra-light and versatile. At your desk, on the couch, or in the yard, get more done your way with Surface Pro 7, featuring a laptop-class Intel® Core™ processor, all-day battery,¹ and HD cameras.",
+                            "SkuTitle": "Surface Pro 7 - Platinum, Intel Core i7, 16GB, 1TB",
+                            "SkuButtonTitle": "Platinum, Intel Core i7, 16GB, 1TB",
+                            "DeliveryDateOverlay": "",
+                            "SkuDisplayRank": [],
+                            "TextResources": [],
+                            "Images": [
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "tile",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                },
+                                {
+                                    "BackgroundColor": "",
+                                    "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                                    "FileSizeInBytes": 2660832,
+                                    "ForegroundColor": "",
+                                    "Height": 1800,
+                                    "ImagePurpose": "screenshot",
+                                    "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                                    "Width": 3000
+                                }
+                            ],
+                            "Language": "en-us",
+                            "Markets": [
+                                "US"
+                            ]
+                        }
+                    ],
+                    "MarketProperties": [
+                        {
+                            "Distributors": [],
+                            "ConfigurationReferences": [
+                                {
+                                    "Key": "color",
+                                    "Value": "86888a"
+                                },
+                                {
+                                    "Key": "processor",
+                                    "Value": "Corei7"
+                                },
+                                {
+                                    "Key": "memory",
+                                    "Value": "16GB"
+                                },
+                                {
+                                    "Key": "storage",
+                                    "Value": "1TB"
+                                }
+                            ],
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Markets": [
+                                "US"
+                            ],
+                            "SupportedLanguages": [
+                                "neutral",
+                                "en-us",
+                                "es-us"
+                            ],
+                            "TokenMintSources": null
+                        }
+                    ],
+                    "Properties": {
+                        "ExternalSource": {
+                            "Name": "fa52f498-8fca-4ca2-8173-15e1140b519a",
+                            "Id": "VDX-00001"
+                        },
+                        "Dimensions": {
+                            "Length": 0.0,
+                            "Width": 0.0,
+                            "Height": 0.0,
+                            "Weight": 4.757,
+                            "SystemOfMeasurement": "U.S. Customary"
+                        },
+                        "Distributions": {},
+                        "IsPreOrder": false,
+                        "IsBundle": false,
+                        "IsTrial": false,
+                        "SkuDisplayRank": 9,
+                        "InventoryControlSkuId": "VDX-00001",
+                        "AdditionalIdentifiers": [],
+                        "LastUpdateDate": "",
+                        "VisibleToB2BServiceIds": [],
+                        "BillOnPurchase": null,
+                        "ConversionPaths": null,
+                        "AssetLifecycleData": null
+                    },
+                    "LastModifiedDate": "2019-07-23T17:29:30.4596154Z",
+                    "ProductId": "8N17J0M5ZZQS",
+                    "SkuASchema": "SKU;3",
+                    "SkuBSchema": "SkuDevice;3",
+                    "SkuId": "J9PZ",
+                    "SkuType": "Full"
+                },
+                "Availabilities": [
+                    {
+                        "Actions": [
+                            "Browse",
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8WQFRZL9KCF0",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-17T18:05:32.8353095Z"
+                        },
+                        "DisplayRank": 0,
+                        "LastModifiedDate": "2020-11-17T18:05:34Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 2299.99,
+                                "MSRP": 2299.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": []
+                        },
+                        "RemediationRequired": false,
+                        "SkuId": "J9PZ",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    },
+                    {
+                        "Actions": [
+                            "Curate",
+                            "Details",
+                            "Fulfill",
+                            "Purchase"
+                        ],
+                        "AvailabilityASchema": "Availability;3",
+                        "AvailabilityId": "8W6B4DRPZTQX",
+                        "Conditions": {
+                            "ClientConditions": {
+                                "AllowedPlatforms": []
+                            },
+                            "EndDate": "2021-10-16T06:59:00Z",
+                            "ResourceSetIds": [
+                                "1"
+                            ],
+                            "StartDate": "2020-11-17T18:05:32.8353095Z"
+                        },
+                        "DisplayRank": 1,
+                        "LastModifiedDate": "2020-11-17T18:05:33Z",
+                        "OrderManagementData": {
+                            "PIFilter": {
+                                "ExclusionProperties": [
+                                    "NonMobileOperatorContent",
+                                    "PhysicalGoods"
+                                ],
+                                "InclusionProperties": []
+                            },
+                            "Price": {
+                                "CurrencyCode": "USD",
+                                "IsPIRequired": true,
+                                "ListPrice": 2069.99,
+                                "MSRP": 2299.99,
+                                "RecurrencePrice": 0.0,
+                                "TaxType": "TaxesNotIncluded",
+                                "WholesaleCurrencyCode": "",
+                                "WholesalePrice": 0.0
+                            },
+                            "GrantedEntitlementKeys": []
+                        },
+                        "Properties": {
+                            "MerchandisingTags": [
+                                "LowbarDiscount"
+                            ]
+                        },
+                        "RemediationRequired": true,
+                        "Remediations": [
+                            {
+                                "RemediationId": "LowbarDiscountRemediation",
+                                "Type": "Redirect",
+                                "Url": " https://www.microsoft.com/{0}/store/r/student-discounts"
+                            }
+                        ],
+                        "SkuId": "J9PZ",
+                        "Markets": [
+                            "US"
+                        ],
+                        "AvailabilityBSchema": "AvailabilityDevice;3"
+                    }
+                ]
+            }
+        ],
+        "LocalizedProperties": [
+            {
+                "ProductConfiguration": {
+                    "Title": "Configure your New Surface Pro 7",
+                    "ProductConfigurationProperties": [
+                        {
+                            "Key": "color",
+                            "Title": "Color",
+                            "Description": "",
+                            "Values": [
+                                {
+                                    "Name": "000000",
+                                    "Title": "Black"
+                                },
+                                {
+                                    "Name": "86888a",
+                                    "Title": "Platinum"
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "processor",
+                            "Title": "Processor",
+                            "Description": "",
+                            "Values": [
+                                {
+                                    "Name": "Corei5",
+                                    "Title": "Intel Core i5"
+                                },
+                                {
+                                    "Name": "Corei7",
+                                    "Title": "Intel Core i7"
+                                },
+                                {
+                                    "Name": "Corei3",
+                                    "Title": "Intel Core i3"
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "memory",
+                            "Title": "Memory",
+                            "Values": [
+                                {
+                                    "Name": "4GB",
+                                    "Title": "4GB"
+                                },
+                                {
+                                    "Name": "8GB",
+                                    "Title": "8GB"
+                                },
+                                {
+                                    "Name": "16GB",
+                                    "Title": "16GB"
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "storage",
+                            "Title": "Storage",
+                            "Description": "",
+                            "Values": [
+                                {
+                                    "Name": "128GB",
+                                    "Title": "128GB"
+                                },
+                                {
+                                    "Name": "256GB",
+                                    "Title": "256GB"
+                                },
+                                {
+                                    "Name": "512GB",
+                                    "Title": "512GB"
+                                },
+                                {
+                                    "Name": "1TB",
+                                    "Title": "1TB"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "EligibilityProperties": {
+                    "Remediations": [
+                        {
+                            "RemediationId": "LowbarDiscountRemediation",
+                            "Description": "Special pricing for eligible students, parents, teachers and military. May not be combinable with other offers."
+                        }
+                    ],
+                    "Affirmations": []
+                },
+                "Images": [
+                    {
+                        "BackgroundColor": "",
+                        "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                        "FileSizeInBytes": 2660832,
+                        "ForegroundColor": "",
+                        "Height": 1800,
+                        "ImagePurpose": "tile",
+                        "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                        "Width": 3000
+                    },
+                    {
+                        "BackgroundColor": "",
+                        "Caption": "Surface Pro 7 in platinum, shown in tablet mode. ",
+                        "FileSizeInBytes": 2660832,
+                        "ForegroundColor": "",
+                        "Height": 1800,
+                        "ImagePurpose": "screenshot",
+                        "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4",
+                        "Width": 3000
+                    },
+                    {
+                        "BackgroundColor": "",
+                        "Caption": "Surface Pro 7 in black, shown in tablet mode. ",
+                        "FileSizeInBytes": 2577509,
+                        "ForegroundColor": "",
+                        "Height": 1800,
+                        "ImagePurpose": "screenshot",
+                        "Uri": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tf03?ver=cf8b",
+                        "Width": 3000
+                    }
+                ],
+                "ProductDescription": "Ultra-light and versatile. At your desk, on the couch, or in the yard, get more done your way with Surface Pro 7, featuring a laptop-class Intel® Core™ processor, all-day battery,¹ and HD cameras.",
+                "ProductTitle": "Dynamics Enhanced Surface Pro 7",
+                "ShortTitle": "Surface Pro 7 – Ultra-light and versatile – Microsoft Surface",
+                "SortTitle": "",
+                "ShortDescription": "The 12.3\" touchscreen 2-in-1 laptop that’s ultra-light and versatile — Surface Pro 7 is your endlessly adaptable partner now with faster processing and more connections — plus all-day battery life.¹ Surface Pro Type Cover not included.*",
+                "SearchTitles": [
+                    {
+                        "SearchTitleString": "8N17J0M5ZZQS",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "PUV-00016",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "2-in-1",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "laptop",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "12” touchscreen laptop",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "12” touchscreen 2-in-1",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "VNX-00016",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "VAT-00016",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "VDV-00001",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "PUV-00001",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "PUW-00001",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "VNX-00001",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "VAT-00001",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "VDX-00001",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "VDH-00001",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "Surface Pro 7",
+                        "SearchTitleType": "SearchHint"
+                    },
+                    {
+                        "SearchTitleString": "Pro 7",
+                        "SearchTitleType": "SearchHint"
+                    }
+                ],
+                "VoiceTitle": "",
+                "Interactive3DEnabled": false,
+                "Language": "en-us",
+                "Markets": [
+                    "US"
+                ]
+            }
+        ],
+        "MarketProperties": [
+            {
+                "PlannedReleaseDate": "2019-10-22T00:00:00Z",
+                "ReleaseDate": "",
+                "DiscontinuationDate": "",
+                "ProductConfiguration": {
+                    "ProductConfigurationProperties": [
+                        {
+                            "DisplayRank": 0,
+                            "Key": "color",
+                            "SpecificationRenderHint": "Color",
+                            "Values": [
+                                {
+                                    "DisplayRank": 0,
+                                    "IsDefaultSelection": true,
+                                    "Name": "86888a"
+                                },
+                                {
+                                    "DisplayRank": 1,
+                                    "IsDefaultSelection": false,
+                                    "Name": "000000"
+                                }
+                            ]
+                        },
+                        {
+                            "DisplayRank": 1,
+                            "Key": "processor",
+                            "SpecificationRenderHint": "RichText",
+                            "Values": [
+                                {
+                                    "DisplayRank": 0,
+                                    "IsDefaultSelection": true,
+                                    "Name": "Corei3"
+                                },
+                                {
+                                    "DisplayRank": 1,
+                                    "IsDefaultSelection": false,
+                                    "Name": "Corei5"
+                                },
+                                {
+                                    "DisplayRank": 2,
+                                    "IsDefaultSelection": false,
+                                    "Name": "Corei7"
+                                }
+                            ]
+                        },
+                        {
+                            "DisplayRank": 2,
+                            "Key": "memory",
+                            "SpecificationRenderHint": "RichText",
+                            "Values": [
+                                {
+                                    "DisplayRank": 0,
+                                    "IsDefaultSelection": true,
+                                    "Name": "4GB"
+                                },
+                                {
+                                    "DisplayRank": 1,
+                                    "IsDefaultSelection": false,
+                                    "Name": "8GB"
+                                },
+                                {
+                                    "DisplayRank": 2,
+                                    "IsDefaultSelection": false,
+                                    "Name": "16GB"
+                                }
+                            ]
+                        },
+                        {
+                            "DisplayRank": 3,
+                            "Key": "storage",
+                            "SpecificationRenderHint": "RichText",
+                            "Values": [
+                                {
+                                    "DisplayRank": 0,
+                                    "IsDefaultSelection": true,
+                                    "Name": "128GB"
+                                },
+                                {
+                                    "DisplayRank": 1,
+                                    "IsDefaultSelection": false,
+                                    "Name": "256GB"
+                                },
+                                {
+                                    "DisplayRank": 2,
+                                    "IsDefaultSelection": false,
+                                    "Name": "512GB"
+                                },
+                                {
+                                    "DisplayRank": 3,
+                                    "IsDefaultSelection": false,
+                                    "Name": "1TB"
+                                }
+                            ]
+                        }
+                    ],
+                    "ProductConfigurationRenderHint": "ConfiguratorWithFiltersAndSkuSelectors"
+                },
+                "MinimumUserAge": 0,
+                "RelatedProducts": [],
+                "UsageData": [
+                    {
+                        "AggregateTimeSpan": "7Days",
+                        "PlayCount": 0.0,
+                        "PurchaseCount": 0.0,
+                        "RatingCount": 0.0,
+                        "AverageRating": 0.0,
+                        "RentalCount": 0.0,
+                        "TrialCount": 0.0
+                    },
+                    {
+                        "AggregateTimeSpan": "30Days",
+                        "PlayCount": 0.0,
+                        "PurchaseCount": 0.0,
+                        "RatingCount": 0.0,
+                        "AverageRating": 0.0,
+                        "RentalCount": 0.0,
+                        "TrialCount": 0.0
+                    },
+                    {
+                        "AggregateTimeSpan": "AllTime",
+                        "PlayCount": 0.0,
+                        "PurchaseCount": 0.0,
+                        "RatingCount": 254.0,
+                        "AverageRating": 2.9,
+                        "RentalCount": 0.0,
+                        "TrialCount": 0.0
+                    }
+                ],
+                "BundleConfig": {
+                    "BundleId": "064d5463-1df2-49cd-b89f-3bf7704cbcc0",
+                    "BundleSlots": [
+                        {
+                            "ChildIdentifiers": [
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "7GKZ",
+                                    "Tag": "",
+                                    "DisplayRank": 0
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "NSK3",
+                                    "Tag": "",
+                                    "DisplayRank": 1
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "08ZH",
+                                    "Tag": "",
+                                    "DisplayRank": 2
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "RTQN",
+                                    "Tag": "",
+                                    "DisplayRank": 3
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "53NW",
+                                    "Tag": "",
+                                    "DisplayRank": 4
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "3224",
+                                    "Tag": "",
+                                    "DisplayRank": 5
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "KMF5",
+                                    "Tag": "",
+                                    "DisplayRank": 6
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "50Q1",
+                                    "Tag": "",
+                                    "DisplayRank": 7
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "H9HB",
+                                    "Tag": "",
+                                    "DisplayRank": 8
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "WLSP",
+                                    "Tag": "",
+                                    "DisplayRank": 9
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "6SQD",
+                                    "Tag": "",
+                                    "DisplayRank": 10
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "BZMW",
+                                    "Tag": "",
+                                    "DisplayRank": 11
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "JTX3",
+                                    "Tag": "",
+                                    "DisplayRank": 12
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "CKM2",
+                                    "Tag": "",
+                                    "DisplayRank": 13
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "4MHN",
+                                    "Tag": "",
+                                    "DisplayRank": 14
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "ZL0S",
+                                    "Tag": "",
+                                    "DisplayRank": 15
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "65S0",
+                                    "Tag": "",
+                                    "DisplayRank": 16
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "2FG2",
+                                    "Tag": "",
+                                    "DisplayRank": 17
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "J9PZ",
+                                    "Tag": "",
+                                    "DisplayRank": 18
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8N17J0M5ZZQS",
+                                    "SkuId": "D4M3",
+                                    "Tag": "",
+                                    "DisplayRank": 19
+                                }
+                            ],
+                            "DisplayRank": 0,
+                            "LocalizedProperties": [
+                                {
+                                    "Language": "neutral",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Configuration",
+                                    "Language": "en-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Configuración",
+                                    "Language": "es-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                }
+                            ],
+                            "Maximum": 1,
+                            "Minimum": 1,
+                            "SlotId": 0,
+                            "RenderHint": "BuyMGetN"
+                        },
+                        {
+                            "ChildIdentifiers": [
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8MZ2DQW2R94L",
+                                    "SkuId": "900T",
+                                    "AvailabilityId": "4FV5JR30FRQY",
+                                    "Tag": "",
+                                    "DisplayRank": 0
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8ZDKZT3436H2",
+                                    "SkuId": "9TZ1",
+                                    "AvailabilityId": "4FWCTCKVPLDY",
+                                    "Tag": "",
+                                    "DisplayRank": 1
+                                }
+                            ],
+                            "DisplayRank": 1,
+                            "LocalizedProperties": [
+                                {
+                                    "Language": "neutral",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Microsoft 365 (Optional)",
+                                    "Language": "en-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Microsoft 365 (opcionales)",
+                                    "Language": "es-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                }
+                            ],
+                            "Maximum": 1,
+                            "Minimum": 0,
+                            "SlotId": 1,
+                            "RenderHint": "SmallTile"
+                        },
+                        {
+                            "ChildIdentifiers": [
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8XDWZVD05GPQ",
+                                    "SkuId": "9BFP",
+                                    "AvailabilityId": "4FXGVZ2N3Z2Y",
+                                    "Tag": "",
+                                    "DisplayRank": 0
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8MZBMMCK15GR",
+                                    "SkuId": "000R",
+                                    "AvailabilityId": "4FWH3R7X8KCY",
+                                    "Tag": "",
+                                    "DisplayRank": 1
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8MZBMMCK15GR",
+                                    "SkuId": "000R",
+                                    "AvailabilityId": "4FWLWL6D4P6Y",
+                                    "Tag": "",
+                                    "DisplayRank": 1
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8MZBMMCK15G8",
+                                    "SkuId": "000P",
+                                    "AvailabilityId": "4FTN8G8G88SY",
+                                    "Tag": "",
+                                    "DisplayRank": 2
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8MZBMMCK15G8",
+                                    "SkuId": "000P",
+                                    "AvailabilityId": "4FVHGRJTXVTY",
+                                    "Tag": "",
+                                    "DisplayRank": 2
+                                }
+                            ],
+                            "DisplayRank": 2,
+                            "LocalizedProperties": [
+                                {
+                                    "Language": "neutral",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Microsoft Complete Protection Plan (Optional)",
+                                    "Language": "en-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Plan de protección Microsoft Complete (opcionales)",
+                                    "Language": "es-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                }
+                            ],
+                            "Maximum": 1,
+                            "Minimum": 0,
+                            "SlotId": 2,
+                            "RenderHint": "SmallTile"
+                        },
+                        {
+                            "ChildIdentifiers": [
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "91V4VTMHXWPM",
+                                    "SkuId": "6FK8",
+                                    "AvailabilityId": "4FX0RR4SPBTY",
+                                    "Tag": "",
+                                    "DisplayRank": 0
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "943Q37FN6ZPR",
+                                    "SkuId": "4J1S",
+                                    "AvailabilityId": "4FVTMZQMWNDY",
+                                    "Tag": "",
+                                    "DisplayRank": 1
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "943Q37FN6ZPR",
+                                    "SkuId": "GZTC",
+                                    "AvailabilityId": "4FTBB5WW1X2Y",
+                                    "Tag": "",
+                                    "DisplayRank": 2
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "943Q37FN6ZPR",
+                                    "SkuId": "2Q0H",
+                                    "AvailabilityId": "4FVN24S17DSY",
+                                    "Tag": "",
+                                    "DisplayRank": 3
+                                }
+                            ],
+                            "DisplayRank": 5,
+                            "LocalizedProperties": [
+                                {
+                                    "Language": "neutral",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Add your Type Cover (Optional)",
+                                    "Language": "en-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Agrega tu Type Cover (opcionales)",
+                                    "Language": "es-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                }
+                            ],
+                            "Maximum": 4,
+                            "Minimum": 0,
+                            "SlotId": 3,
+                            "RenderHint": "ProductPlacement"
+                        },
+                        {
+                            "ChildIdentifiers": [
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "93JXFNB6BWPP",
+                                    "SkuId": "JKCL",
+                                    "AvailabilityId": "4FW7MS77FQXY",
+                                    "Tag": "",
+                                    "DisplayRank": 0
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8R3MKPF9QLSZ",
+                                    "SkuId": "C49W",
+                                    "AvailabilityId": "4FV2KZV4N1LY",
+                                    "Tag": "",
+                                    "DisplayRank": 1
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8R3MKPF9QLSZ",
+                                    "SkuId": "3QS8",
+                                    "AvailabilityId": "4FX94MF711GY",
+                                    "Tag": "",
+                                    "DisplayRank": 2
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8R3MKPF9QLSZ",
+                                    "SkuId": "H562",
+                                    "AvailabilityId": "4FVBKD7PFPNY",
+                                    "Tag": "",
+                                    "DisplayRank": 3
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8MWHBV8QVSKR",
+                                    "SkuId": "HKL7",
+                                    "AvailabilityId": "4FX4CDQGVSKY",
+                                    "Tag": "",
+                                    "DisplayRank": 4
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "93HFJLP7D0CV",
+                                    "SkuId": "HMN7",
+                                    "AvailabilityId": "4FXFMQ9N0F7Y",
+                                    "Tag": "",
+                                    "DisplayRank": 5
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8ZHRTR7ZCSWQ",
+                                    "SkuId": "9NKT",
+                                    "AvailabilityId": "4FW3KSXTVL3Y",
+                                    "Tag": "",
+                                    "DisplayRank": 6
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8ZHRTR7ZCSWQ",
+                                    "SkuId": "09TN",
+                                    "AvailabilityId": "4FW2MPLTRB2Y",
+                                    "Tag": "",
+                                    "DisplayRank": 7
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "94JNL0T5KDCK",
+                                    "SkuId": "49MQ",
+                                    "AvailabilityId": "4FX19T80BVNY",
+                                    "Tag": "",
+                                    "DisplayRank": 8
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "94JNL0T5KDCK",
+                                    "SkuId": "HL0B",
+                                    "AvailabilityId": "4FTGFXV1SZGY",
+                                    "Tag": "",
+                                    "DisplayRank": 9
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "94JNL0T5KDCK",
+                                    "SkuId": "1NZ1",
+                                    "AvailabilityId": "4FXBXZLL9DVY",
+                                    "Tag": "",
+                                    "DisplayRank": 10
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "94JNL0T5KDCK",
+                                    "SkuId": "64M0",
+                                    "AvailabilityId": "4FX34FLSTNBY",
+                                    "Tag": "",
+                                    "DisplayRank": 11
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8V4NH9Q07XC8",
+                                    "SkuId": "GC1M",
+                                    "AvailabilityId": "4FVL907HF7HY",
+                                    "Tag": "",
+                                    "DisplayRank": 12
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8V4NH9Q07XC8",
+                                    "SkuId": "M107",
+                                    "AvailabilityId": "4FTWW6W35GNY",
+                                    "Tag": "",
+                                    "DisplayRank": 13
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8VCZ2SGC3MWR",
+                                    "SkuId": "4CZJ",
+                                    "AvailabilityId": "4FV2S07F1F5Y",
+                                    "Tag": "",
+                                    "DisplayRank": 14
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8ZHWMX8C1WN2",
+                                    "SkuId": "0G2P",
+                                    "AvailabilityId": "4FVSS2HPS03Y",
+                                    "Tag": "",
+                                    "DisplayRank": 15
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "93841NGDWR1H",
+                                    "SkuId": "8CSV",
+                                    "AvailabilityId": "4FX7HWDRGWVY",
+                                    "Tag": "",
+                                    "DisplayRank": 16
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8NLWZ0MQK26D",
+                                    "SkuId": "L063",
+                                    "AvailabilityId": "4FWGPJV9S2XY",
+                                    "Tag": "",
+                                    "DisplayRank": 17
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8QBX2W3XSP2H",
+                                    "SkuId": "8STG",
+                                    "AvailabilityId": "4FW339GNZL8Y",
+                                    "Tag": "",
+                                    "DisplayRank": 18
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8QBX2W3XSP2H",
+                                    "SkuId": "FG8K",
+                                    "AvailabilityId": "4FVSGGLL684Y",
+                                    "Tag": "",
+                                    "DisplayRank": 19
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "926GK79B71V9",
+                                    "SkuId": "L1S2",
+                                    "AvailabilityId": "4FWD7HWK6PKY",
+                                    "Tag": "",
+                                    "DisplayRank": 20
+                                }
+                            ],
+                            "DisplayRank": 6,
+                            "LocalizedProperties": [
+                                {
+                                    "Language": "neutral",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Save on select accessories with your order (Optional)",
+                                    "Language": "en-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Ahorra en accesorios seleccionados con tu compra (opcionales)",
+                                    "Language": "es-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                }
+                            ],
+                            "Maximum": 20,
+                            "Minimum": 0,
+                            "SlotId": 4,
+                            "RenderHint": "ProductPlacement"
+                        },
+                        {
+                            "ChildIdentifiers": [
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8QB04VN3ZVFL",
+                                    "SkuId": "HN2W",
+                                    "AvailabilityId": "4FVNZ3QHRZQY",
+                                    "Tag": "",
+                                    "DisplayRank": 0
+                                }
+                            ],
+                            "DisplayRank": 3,
+                            "LocalizedProperties": [
+                                {
+                                    "Language": "neutral",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Free holiday gift with purchase (Optional)",
+                                    "Language": "en-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Free holiday gift with purchase (Optional)",
+                                    "Language": "es-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                }
+                            ],
+                            "Maximum": 1,
+                            "Minimum": 0,
+                            "SlotId": 5,
+                            "RenderHint": "LargeTile"
+                        },
+                        {
+                            "ChildIdentifiers": [
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8MRGKL8T2V5D",
+                                    "SkuId": "9CTW",
+                                    "AvailabilityId": "4FWG50K2V16Y",
+                                    "Tag": "",
+                                    "DisplayRank": 0
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8MRGKL8T2V5D",
+                                    "SkuId": "23RF",
+                                    "AvailabilityId": "4FW7TNCX3W2Y",
+                                    "Tag": "",
+                                    "DisplayRank": 1
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8MRGKL8T2V5D",
+                                    "SkuId": "9QPQ",
+                                    "AvailabilityId": "4FW4F52WF32Y",
+                                    "Tag": "",
+                                    "DisplayRank": 2
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8MRGKL8T2V5D",
+                                    "SkuId": "KJ9H",
+                                    "AvailabilityId": "4FXKBHH34LSY",
+                                    "Tag": "",
+                                    "DisplayRank": 3
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8V5N3QW7D8H9",
+                                    "SkuId": "HDH2",
+                                    "AvailabilityId": "4FW598MXRK7Y",
+                                    "Tag": "",
+                                    "DisplayRank": 4
+                                },
+                                {
+                                    "AutoSelected": false,
+                                    "DefaultSelected": false,
+                                    "ProductId": "8NPTJ76CHNT7",
+                                    "SkuId": "BB6G",
+                                    "AvailabilityId": "4FWF9CM06ZFY",
+                                    "Tag": "",
+                                    "DisplayRank": 5
+                                }
+                            ],
+                            "DisplayRank": 4,
+                            "LocalizedProperties": [
+                                {
+                                    "Language": "neutral",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Add your free sleeve (Required)",
+                                    "Language": "en-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                },
+                                {
+                                    "SlotTitle": "Agrega tu manga gratis (obligatorio)",
+                                    "Language": "es-us",
+                                    "Markets": [
+                                        "US"
+                                    ]
+                                }
+                            ],
+                            "Maximum": 1,
+                            "Minimum": 1,
+                            "SlotId": 6,
+                            "RenderHint": "ProductPlacement"
+                        }
+                    ],
+                    "LocalizedProperties": [
+                        {
+                            "Language": "neutral",
+                            "Markets": [
+                                "US"
+                            ]
+                        },
+                        {
+                            "Language": "en-us",
+                            "Markets": [
+                                "US"
+                            ]
+                        },
+                        {
+                            "Language": "es-us",
+                            "Markets": [
+                                "US"
+                            ]
+                        }
+                    ],
+                    "RenderHint": "BuyMGetN",
+                    "SaveUpTo": {
+                        "CurrencyCode": "USD",
+                        "IsPIRequired": true,
+                        "ListPrice": 0.0,
+                        "MSRP": 0.0,
+                        "RecurrencePrice": 0.0,
+                        "TaxType": "TaxesNotIncluded",
+                        "WholesaleCurrencyCode": "USD",
+                        "WholesalePrice": 0.0
+                    },
+                    "StartingFromAmount": {
+                        "CurrencyCode": "USD",
+                        "IsPIRequired": true,
+                        "ListPrice": 0.0,
+                        "MSRP": 0.0,
+                        "RecurrencePrice": 0.0,
+                        "TaxType": "TaxesNotIncluded",
+                        "WholesaleCurrencyCode": "USD",
+                        "WholesalePrice": 0.0
+                    }
+                },
+                "Markets": [
+                    "US"
+                ]
+            }
+        ],
+        "Properties": {
+            "PdpBackgroundColor": "",
+            "RevisionId": "2020-11-22T06:13:02.0525857Z",
+            "PublisherId": "",
+            "EntitlementProperties": null,
+            "ProductGroupId": null,
+            "ProductGroupName": null,
+            "IsPrivateBeforeDateHint": null,
+            "StreamableGamingPlatforms": null
+        },
+        "ProductFamily": "Devices",
+        "ProductKind": "Devices",
+        "ProductType": "Devices",
+        "ProductId": "8N17J0M5ZZQS",
+        "ProductASchema": "Product;3",
+        "ProductBSchema": "ProductDevice;1",
+        "LastModifiedDate": "2019-07-23T17:29:29.4127430Z",
+        "AlternateIds": [],
+        "IngestionSource": "RPMSourceProcessors",
+        "IsMicrosoftProduct": true,
+        "IsTestProduct": false,
+        "MerchandizingTags": [],
+        "PreferredSkuId": "H9HL",
+        "ValidationData": {
+            "PassedValidation": false
+        },
+        "DomainDataVersion": null,
+        "SchemaVersion": "1"
+    }
+}
