@@ -44,8 +44,15 @@ A JQL property-path (or just "path") denotes the list of property keys to search
 Property names start with a `.` (period).
 
 Arrays are denoted with `[]` (square-brackets).
-If left empty, all elements are considered (i.e. "if some element matches...").
+If the brackets are left empty (i.e. "ambiguously indexed"), all elements are considered (i.e. "if some element matches...").
 If given an index (e.g. `[0]`), only the element at that index is considered.
+
+Note that `-in ...SomeList` works the same as `-eq ...SomeList[]` where the elements of `...SomeList[]` are primitive (strings or numbers).
+However, `-in` can _also_ search for the existence of a property.
+So `-in ...SomeObj SomeKey` and `-ex ...SomeObj.SomeKey` are both valid and equivalent.
+
+In other words, paths with `[]` can be said as "some element of <path>". E.g. `-ex .Titles` can be pronounced as "The Titles property exists"
+whereas `-ex .Titles[]` can be pronounced as "**Some element of** the Titles property exists".
 
 **Example**
 
@@ -129,14 +136,14 @@ Resolves to true if `path` is undefined.
 
 ### Contains (in)
 
-Usage: `-in <param|expr> <path|expr>`
+Usage: `-in <path|expr> <param|expr>`
 
 Resolves to true if `param|expr` is contained in `path|expr`
 
 
 ### Not Contains (nn)
 
-Usage: `-nn <param|expr> <path|expr>`
+Usage: `-nn <path|expr> <param|expr>`
 
 Equivalent to `-not -in <param|expr> <path|expr>`
 
