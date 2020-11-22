@@ -82,7 +82,7 @@ def create_tree(tokens: Queue) -> dict:
 
         return curr
 
-    curr = curr.lower()
+    curr = curr
 
     for op, num_args in OPS:
         if curr == op:
@@ -129,7 +129,7 @@ def get_value(json: dict, prop_path: str):
             curr = new_curr
 
     if isinstance(curr, str):
-        curr = curr.lower()
+        curr = curr
 
     if isinstance(curr, list):
         curr = [evaluate(json, el) for el in curr]
@@ -155,7 +155,7 @@ def evaluate(json: dict, operator):
             value = get_value(json, operator)
             return value
 
-        return operator.lower()
+        return operator
 
     # These are parameters, and need to be eval'd/returned individually
     if isinstance(operator, tuple):
@@ -216,13 +216,13 @@ def evaluate(json: dict, operator):
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda p: p == param_1, param_0)
+                return some(lambda p: p.lower() == param_1.lower(), param_0)
 
             if op == '-ne':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda p: p != param_1, param_0)
+                return some(lambda p: p.lower() != param_1.lower(), param_0)
 
             if op == '-mt' or op == '-rx':
                 param_0 = evaluate(json, params[0])
@@ -287,7 +287,6 @@ def evaluate(json: dict, operator):
                 return some(lambda p: isinstance(p, int) or isinstance(p, float), param_0)
 
     return operator
-
 
 
 def main():
