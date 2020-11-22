@@ -37,6 +37,8 @@ All expressions are of the form `<operator> <path> [params]` (i.e. prefix notati
 
 Expressions may be conjoined to create complex expressions.
 
+Note: This implementation does not currently support passing two paths as parameters.
+
 ## Path
 
 A JQL property-path (or just "path") denotes the list of property keys to search through.
