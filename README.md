@@ -125,10 +125,36 @@ Equivalent to `-not -ex <path>`
 Resolves to true if `path` is undefined.
 
 
+### Contains (in)
+
+Usage: `-in <path|expr> <param|expr>`
+
+Resolves to true if `path|expr` is contained in `param|expr`
+
+
+### Not Contains (nn)
+
+Usage: `-nn <path|expr> <param|expr>`
+
+Equivalent to `-not -in <path|expr> <param|expr>`
+
+Resolves to true if `path|expr` is not contained in `param|expr`
+
+
 ### Equals (eq)
 
 Usage: `-eq <path|expr> <param|expr>`
 where the value of `path|expr` and `param|expr` is a string or number.
+
+Resolves to true if the value of `path|expr` exactly matches `param|expr`.
+
+
+### Not Equals (ne)
+
+Usage: `-ne <path|expr> <param|expr>`
+where the value of `path|expr` and `param|expr` is a string or number.
+
+Equivalent to `-not -eq <path|expr> <param|expr>`
 
 Resolves to true if the value of `path|expr` exactly matches `param|expr`.
 
@@ -143,6 +169,8 @@ OR
 where the value of `<path|expr>` is a string or number, and `param|expr` is a regular expression.
 
 Resolves to true if the value of `path|expr` matches the regular expression in `param|expr`.
+
+Note: Regular expressions that also appear to be a valid property-path (e.g. `.tilities[123456789]`) will be interpreted as a property-path.
 
 
 ### Less Than (lt)
