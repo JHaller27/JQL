@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/cs/bin/Debug/net5.0/JQL.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/py/jql.py",
+            "console": "integratedTerminal",
+            // "args": ["./data/example.json", "-in", ".Companions[].AppearsIn", "5"]
+            // "args": ["./data/example.json", "-eq", ".Companions[].AppearsIn[]", "5"]
+            "args": ["./data", "-eq", ".Product.DisplaySkuAvailabilities[0].Availabilities[0].OrderManagementData.Price.ListPrice", ".Product.DisplaySkuAvailabilities[0].Availabilities[0].OrderManagementData.Price.MSRP"]
+        }
+    ]
+}
