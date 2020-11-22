@@ -9,6 +9,8 @@ with open(PATH, "w") as fout:
 
 namespace Operations {{
     class {CLS_NAME} : Expression {{
+        private static Regex OperationRegex = new Regex(@"");
+
         public {CLS_NAME}(Operation[] args) : base(args) {{ }}
 
         public override int RequiredArgs()
@@ -18,12 +20,12 @@ namespace Operations {{
 
         public override Operation Clone(Operation[] args)
         {{
-            throw new NotImplementedException();
+            return new {CLS_NAME}(args);
         }}
 
         public override bool CanParse(string token)
         {{
-            throw new NotImplementedException();
+            return OperationRegex.IsMatch(token);
         }}
 
         protected override string EvaluateAsString()
