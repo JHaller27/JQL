@@ -24,7 +24,36 @@ namespace Operations {
 
         internal override bool EvaluateAsBool()
         {
-            return Args[0].EvaluateAsString().Equals(Args[1].EvaluateAsString());
+            // Try string
+            try
+            {
+                return Args[0].EvaluateAsString().Equals(Args[1].EvaluateAsString());
+            }
+            catch (System.Exception) { }
+
+            // Try int
+            try
+            {
+                return Args[0].EvaluateAsInt().Equals(Args[1].EvaluateAsInt());
+            }
+            catch (System.Exception) { }
+
+            // Try double
+            try
+            {
+                return Args[0].EvaluateAsDouble().Equals(Args[1].EvaluateAsDouble());
+            }
+            catch (System.Exception) { }
+
+            // Try bool
+            try
+            {
+                return Args[0].EvaluateAsInt().Equals(Args[1].EvaluateAsBool());
+            }
+            catch (System.Exception) { }
+
+            // Return false if types are different
+            return false;
         }
     }
 }

@@ -40,7 +40,17 @@ namespace Operations
                 if (part[0] == '.')
                 {
                     string key = part.Substring(1);
-                    if ( ! ((IDictionary<string, dynamic>) curr).TryGetValue(key, out curr) )
+
+                    IDictionary<string, dynamic> currDict;
+                    try {
+                        currDict = (IDictionary<string, dynamic>) curr;
+                    }
+                    catch (Exception)
+                    {
+                        currDict = ((List<KeyValuePair<string, dynamic>>) curr).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                    }
+
+                    if ( ! currDict.TryGetValue(key, out curr) )
                     {
                         return null;
                     }
