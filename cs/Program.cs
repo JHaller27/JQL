@@ -47,6 +47,7 @@ namespace JQL
                 new NotEqualsExpression(null),
 
                 new PathPrimitive(null, json),
+                new LiteralPrimitive(null),
             };
 
             Operation operationTree;
