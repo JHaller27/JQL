@@ -16,17 +16,6 @@ namespace Operations
         public PathPrimitive(string arg, IDictionary<string, dynamic> json) : base(arg)
         {
             Json = json;
-
-            IList<string> pathParts = new List<string>();
-
-            MatchCollection matches = OperationRegex.Matches(Arg);
-            foreach (Match match in matches)
-            {
-                GroupCollection groups = match.Groups;
-                pathParts.Add(groups["part"].Value);
-            }
-
-            PathElements = pathParts.ToArray();
         }
 
         public override Operation ClonePrimitive(string arg)
