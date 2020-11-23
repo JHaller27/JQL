@@ -45,6 +45,8 @@ namespace JQL
                 new OrExpression(null),
                 new EqualsExpression(null),
                 new NotEqualsExpression(null),
+
+                new PathPrimitive(null, json),
             };
 
             Operation operationTree;
