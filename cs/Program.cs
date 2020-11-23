@@ -24,23 +24,47 @@ namespace JQL
 
         static bool FilePasses(string root, string fileName, Queue<string> expressionTokens)
         {
-            IDictionary<string, dynamic> json = GetJson(root, fileName);
+            IDictionary<string, dynamic> json;
+
+            try
+            {
+                string filePath = Path.Combine(root, fileName);
+                json = GetJson(filePath);
+            }
+            catch (JsonReaderException)
+            {
+                Console.Error.WriteLine($"File at '{fileName}' is not valid JSON");
+                return false;
+            }
 
             Operation[] prototypePool = new Operation[]
             {
                 // Must be in Order of Operations
+                new NotExpression(null),
+                new AndExpression(null),
+                new OrExpression(null),
+                new EqualsExpression(null),
+                new NotEqualsExpression(null),
             };
 
-            Operation operationTree = Parse(prototypePool, expressionTokens);
+            Operation operationTree;
+            try
+            {
+                operationTree = Parse(prototypePool, expressionTokens);
+            }
+            catch (InvalidOperationException)
+            {
+                Console.Error.WriteLine("Invalid expression");
+                return false;
+            }
 
             bool retv = operationTree.Evaluate();
 
             return retv;
         }
 
-        static IDictionary<string, dynamic> GetJson(string root, string fileName)
+        static IDictionary<string, dynamic> GetJson(string filePath)
         {
-            string filePath = Path.Combine(root, fileName);
             string rawJson = File.ReadAllText(filePath);
             IDictionary<string, dynamic> json = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(rawJson);
 
