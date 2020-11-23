@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Operations
 {
@@ -45,13 +46,20 @@ namespace Operations
             throw new InvalidOperationException("Operation cannot be evaluated as a boolean");
         }
 
-        // TODO Support EvaluateAsArray
-        // TODO Support EvaluateAsObject
+        internal virtual dynamic[] EvaluateAsArray()
+        {
+            throw new InvalidOperationException("Operation cannot be evaluated as an array");
+        }
+
+        internal virtual IDictionary<string, dynamic> EvaluateAsObject()
+        {
+            throw new InvalidOperationException("Operation cannot be evaluated as an object");
+        }
     }
 
     abstract class Primitive : Operation
     {
-        private string Arg { get; set; }
+        protected string Arg { get; }
 
         public Primitive(string arg)
         {
