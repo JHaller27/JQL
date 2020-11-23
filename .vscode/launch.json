@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/cs/bin/Debug/net5.0/JQL.dll",
-            "args": ["${workspaceFolder}/data"],
+            "args": ["${workspaceFolder}/data", "-eq", ".First", "Jon"],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
             "console": "internalConsole"
