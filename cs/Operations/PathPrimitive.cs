@@ -88,36 +88,55 @@ namespace Operations
             return curr;
         }
 
-        // TODO Evalute (use Traverse(), then try to convert)
+        private static string[] SplitPath(string path)
+        {
+            Regex partRegex = new Regex(@"(?<part>(\.\w+)|(\[\d*\]))");
+
+            return partRegex.Matches(path)
+                .Select(m => m.Groups["part"].Value)
+                .ToArray();
+        }
 
         internal override string EvaluateAsString()
         {
-            throw new InvalidOperationException("Operation cannot be evaluated as a string");
+            string[] pathParts = SplitPath(Arg);
+
+            return (string) Traverse(pathParts, Json);
         }
 
         internal override int EvaluateAsInt()
         {
-            throw new InvalidOperationException("Operation cannot be evaluated as an integer");
+            string[] pathParts = SplitPath(Arg);
+
+            return (int) Traverse(pathParts, Json);
         }
 
         internal override double EvaluateAsDouble()
         {
-            throw new InvalidOperationException("Operation cannot be evaluated as a double");
+            string[] pathParts = SplitPath(Arg);
+
+            return (int) Traverse(pathParts, Json);
         }
 
         internal override bool EvaluateAsBool()
         {
-            throw new InvalidOperationException("Operation cannot be evaluated as a boolean");
+            string[] pathParts = SplitPath(Arg);
+
+            return (bool) Traverse(pathParts, Json);
         }
 
         internal override dynamic[] EvaluateAsArray()
         {
-            throw new InvalidOperationException("Operation cannot be evaluated as an array");
+            string[] pathParts = SplitPath(Arg);
+
+            return (dynamic[]) Traverse(pathParts, Json);
         }
 
         internal override IDictionary<string, dynamic> EvaluateAsObject()
         {
-            throw new InvalidOperationException("Operation cannot be evaluated as an object");
+            string[] pathParts = SplitPath(Arg);
+
+            return (IDictionary<string, dynamic>) Traverse(pathParts, Json);
         }
     }
 }
