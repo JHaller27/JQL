@@ -33,8 +33,12 @@ def get_args():
 
 
 def get_json(path: str) -> dict:
-    with open(path, 'r') as fin:
-        data = json.load(fin)
+    try:
+        with open(path, 'r') as fin:
+            data = json.load(fin)
+    except UnicodeDecodeError:
+        with open(path, 'r', encoding='cp1252') as fin:
+            data = json.load(fin)
 
     return data
 
