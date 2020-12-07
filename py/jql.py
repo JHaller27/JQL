@@ -101,7 +101,7 @@ def create_tree(tokens: Queue) -> dict:
 
 
 ARRAY_PATH_REGEX = re.compile(r'^(?P<path>[A-Za-z0-9]+)\[(?P<idx>\d+)?\]$')
-def get_value(json: dict, prop_path: str):
+def get_value(json: dict, prop_path: str, force_single=False):
     curr = [json]
     for path_el in prop_path.split('.')[1:]:
         new_curr = []
@@ -139,6 +139,9 @@ def get_value(json: dict, prop_path: str):
     if isinstance(curr, list):
         curr = [evaluate(json, el) for el in curr]
 
+        if force_single:
+            curr = curr[0]
+
     return curr
 
 
@@ -155,11 +158,11 @@ def some(callback, arr: list) -> bool:
 
 
 PATH_REGEX = re.compile(r'^(\.[A-Za-z0-9]+(\[\d*\])?)+$')
-def evaluate(json: dict, operator):
+def evaluate(json: dict, operator, force_single=False):
     # A String operator should always be a property-path
     if isinstance(operator, str):
         if PATH_REGEX.search(operator) is not None:
-            value = get_value(json, operator)
+            value = get_value(json, operator, force_single)
             return value
 
         return operator
@@ -209,31 +212,31 @@ def evaluate(json: dict, operator):
 
             if op == '-in':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1])
+                param_1 = evaluate(json, params[1], True)
 
                 return some(lambda p: param_1 in p, param_0)
 
             if op == '-nin':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1])
+                param_1 = evaluate(json, params[1], True)
 
                 return some(lambda p: param_1 not in p, param_0)
 
             if op == '-eq':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1])
+                param_1 = evaluate(json, params[1], True)
 
                 return some(lambda p: str(p).lower() == str(param_1).lower(), param_0)
 
             if op == '-ne':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1])
+                param_1 = evaluate(json, params[1], True)
 
                 return some(lambda p: str(p).lower() != str(param_1).lower(), param_0)
 
             if op == '-mt' or op == '-rx':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1])
+                param_1 = evaluate(json, params[1], True)
 
                 if param_0 is None:
                     return False
@@ -245,25 +248,25 @@ def evaluate(json: dict, operator):
 
             if op == '-lt':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1])
+                param_1 = evaluate(json, params[1], True)
 
                 return some(lambda p: p < param_1, param_0)
 
             if op == '-le':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1])
+                param_1 = evaluate(json, params[1], True)
 
                 return some(lambda p: p <= param_1, param_0)
 
             if op == '-gt':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1])
+                param_1 = evaluate(json, params[1], True)
 
                 return some(lambda p: p > param_1, param_0)
 
             if op == '-ge':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1])
+                param_1 = evaluate(json, params[1], True)
 
                 return some(lambda p: p >= param_1, param_0)
 
@@ -284,7 +287,6 @@ def evaluate(json: dict, operator):
 
             if op == '-str':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1])
 
                 return some(lambda p: isinstance(p, str), param_0)
 
