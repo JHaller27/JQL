@@ -303,8 +303,8 @@ def list_files(dir_path: str):
 
 
 def main():
-    data_root = sys.argv[1]
-    token_queue = Queue(sys.argv[2:])
+    data_root, token_list = get_args()
+    token_queue = Queue(token_list)
 
     tree = create_tree(token_queue)
 
