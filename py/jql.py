@@ -101,7 +101,7 @@ def create_tree(tokens: Queue) -> dict:
 
 
 ARRAY_PATH_REGEX = re.compile(r'^(?P<path>[A-Za-z0-9]+)\[(?P<idx>\d+)?\]$')
-def get_value(json: dict, prop_path: str, force_single=False):
+def get_value(json: dict, prop_path: str):
     curr = [json]
     for path_el in prop_path.split('.')[1:]:
         new_curr = []
@@ -139,30 +139,40 @@ def get_value(json: dict, prop_path: str, force_single=False):
     if isinstance(curr, list):
         curr = [evaluate(json, el) for el in curr]
 
-        if force_single:
-            curr = curr[0]
-
     return curr
 
 
-def some(callback, arr: list) -> bool:
-    if isinstance(arr, bool):
-        return callback(arr)
+def some(callback, a=None, b=None) -> bool:
+    if a is None:
+        clean_callback = lambda a, b: callback()
+    elif b is None:
+        clean_callback = lambda a, b: callback(a)
+    else:
+        clean_callback = callback
 
-    if isinstance(arr, list):
-        for el in arr:
-            if callback(el):
+    try:
+        if len(a) == 1:
+            for el in b:
+                if clean_callback(a, el):
+                    return True
+
+            return False
+
+        for a, b in zip(a, b):
+            if clean_callback(a, b):
                 return True
 
-    return False
+            return False
+    except TypeError:
+        return clean_callback(a, b)
 
 
 PATH_REGEX = re.compile(r'^(\.[A-Za-z0-9]+(\[\d*\])?)+$')
-def evaluate(json: dict, operator, force_single=False):
+def evaluate(json: dict, operator):
     # A String operator should always be a property-path
     if isinstance(operator, str):
         if PATH_REGEX.search(operator) is not None:
-            value = get_value(json, operator, force_single)
+            value = get_value(json, operator)
             return value
 
         return operator
@@ -212,31 +222,31 @@ def evaluate(json: dict, operator, force_single=False):
 
             if op == '-in':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1], True)
+                param_1 = evaluate(json, params[1])
 
-                return some(lambda p: param_1 in p, param_0)
+                return some(lambda a, b: a in b, param_0, param_1)
 
             if op == '-nin':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1], True)
+                param_1 = evaluate(json, params[1])
 
-                return some(lambda p: param_1 not in p, param_0)
+                return some(lambda a, b: a not in b, param_0, param_1)
 
             if op == '-eq':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1], True)
+                param_1 = evaluate(json, params[1])
 
-                return some(lambda p: str(p).lower() == str(param_1).lower(), param_0)
+                return some(lambda a, b: str(a).lower() == str(b).lower(), param_0, param_1)
 
             if op == '-ne':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1], True)
+                param_1 = evaluate(json, params[1])
 
-                return some(lambda p: str(p).lower() != str(param_1).lower(), param_0)
+                return some(lambda a, b: str(a).lower() != str(b).lower(), param_0, param_1)
 
             if op == '-mt' or op == '-rx':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1], True)
+                param_1 = evaluate(json, params[1])
 
                 if param_0 is None:
                     return False
@@ -244,31 +254,31 @@ def evaluate(json: dict, operator, force_single=False):
                 if param_1 is None:
                     raise InvalidPathOrExpression(params[1], 'Invalid regular expression')
 
-                return some(lambda p: re.search(param_1, p) is not None, param_0)
+                return some(lambda a, b: re.search(b, a) is not None, param_0, param_1)
 
             if op == '-lt':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1], True)
+                param_1 = evaluate(json, params[1])
 
-                return some(lambda p: p < param_1, param_0)
+                return some(lambda a, b: a < b, param_0, param_1)
 
             if op == '-le':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1], True)
+                param_1 = evaluate(json, params[1])
 
-                return some(lambda p: p <= param_1, param_0)
+                return some(lambda a, b: a <= b, param_0, param_1)
 
             if op == '-gt':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1], True)
+                param_1 = evaluate(json, params[1])
 
-                return some(lambda p: p > param_1, param_0)
+                return some(lambda a, b: a > b, param_0, param_1)
 
             if op == '-ge':
                 param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1], True)
+                param_1 = evaluate(json, params[1])
 
-                return some(lambda p: p >= param_1, param_0)
+                return some(lambda a, b: a >= b, param_0, param_1)
 
             if op == '-len':
                 param_0 = evaluate(json, params[0])
@@ -317,6 +327,8 @@ def main():
             retv = evaluate(json_data, tree)
         except InvalidPathOrExpression as ipoe:
             return ipoe
+        except TypeError:
+            retv = False
 
         if not isinstance(retv, bool):
             raise TypeError(f"JQL does not resolve to a boolean (resolves to '{retv}')")
