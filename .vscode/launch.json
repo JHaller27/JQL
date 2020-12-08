@@ -23,7 +23,7 @@
             "console": "integratedTerminal",
             // "args": ["./data/example.json", "-in", ".Companions[].AppearsIn", "5"]
             // "args": ["./data/example.json", "-eq", ".Companions[].AppearsIn[]", "5"]
-            "args": ["${workspaceFolder}/data", "-eq", ".Product.DisplaySkuAvailabilities[0].Availabilities[0].OrderManagementData.Price.ListPrice", ".Product.DisplaySkuAvailabilities[0].Availabilities[0].OrderManagementData.Price.MSRP"]
+            "args": ["${workspaceFolder}/data", "-eq", ".Product.DisplaySkuAvailabilities[0].Availabilities[].OrderManagementData.Price.ListPrice", ".Product.DisplaySkuAvailabilities[0].Availabilities[].OrderManagementData.Price.MSRP"]
         }
     ]
 }
