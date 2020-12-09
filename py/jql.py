@@ -158,13 +158,14 @@ def some(callback, a=None, b=None) -> bool:
 
             return False
 
-        for a, b in zip(a, b):
-            if clean_callback(a, b):
+        for x, y in zip(a, b):
+            if clean_callback(x, y):
                 return True
 
-            return False
     except TypeError:
         return clean_callback(a, b)
+
+    return False
 
 
 PATH_REGEX = re.compile(r'^(\.[A-Za-z0-9]+(\[\d*\])?)+$')
