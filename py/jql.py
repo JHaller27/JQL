@@ -144,26 +144,40 @@ def get_value(json: dict, prop_path: str):
 
 def some(callback, a=None, b=None) -> bool:
     if a is None:
-        clean_callback = lambda a, b: callback()
+        return _some_no_args(callback)
     elif b is None:
-        clean_callback = lambda a, b: callback(a)
+        return _some_one_arg(callback, a)
     else:
-        clean_callback = callback
-
-    try:
         if len(a) == 1:
-            for el in b:
-                if clean_callback(a, el):
-                    return True
+            return _some_one_to_many(callback, a, b)
 
-            return False
+        return _some_many_to_many(callback, a, b)
 
-        for x, y in zip(a, b):
-            if clean_callback(x, y):
-                return True
 
-    except TypeError:
-        return clean_callback(a, b)
+def _some_no_args(callback):
+    return callback()
+
+
+def _some_one_arg(callback, a):
+    for x in a:
+        if callback(x):
+            return True
+
+    return False
+
+
+def _some_one_to_many(callback, a, b):
+    for el in b:
+        if callback(a, el):
+            return True
+
+    return False
+
+
+def _some_many_to_many(callback, a, b):
+    for x, y in zip(a, b):
+        if callback(x, y):
+            return True
 
     return False
 
