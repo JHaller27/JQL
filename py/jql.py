@@ -337,14 +337,12 @@ def main():
         if retv:
             valid_files.append(json_path)
 
-    print("Files matching search criteria...")
-
-    if len(valid_files) == 0:
-        print("\tNone found")
-        return
+    print(f"Files matching search criteria...")
 
     for vf in valid_files:
-        print(f"\t{vf}")
+        print(f"{vf}")
+
+    print(f"({len(valid_files)} files match)")
 
 
 if __name__ == "__main__":
