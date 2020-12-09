@@ -2,6 +2,7 @@ import re
 import os
 import sys
 import json
+import argparse
 
 
 class Queue:
@@ -26,10 +27,14 @@ class InvalidPathOrExpression(Exception):
 
 
 def get_args():
-    root = sys.argv[1]
-    jql_tokens = sys.argv[2:]
+    parser = argparse.ArgumentParser()
 
-    return root, jql_tokens
+    parser.add_argument('root', type=str, help='Path to root to search for .json files')
+    parser.add_argument('-r', '--recurse', action='store_true')
+
+    args, jql_tokens = parser.parse_known_args()
+
+    return args, jql_tokens
 
 
 def get_json(path: str) -> dict:
@@ -148,10 +153,7 @@ def some(callback, a=None, b=None) -> bool:
     elif b is None:
         return _some_one_arg(callback, a)
     else:
-        if len(a) == 1:
-            return _some_one_to_many(callback, a, b)
-
-        return _some_many_to_many(callback, a, b)
+        return _some_two_arg(callback, a, b)
 
 
 def _some_no_args(callback):
@@ -166,9 +168,42 @@ def _some_one_arg(callback, a):
     return False
 
 
+def _some_two_arg(callback, a, b):
+    a_many = False
+    b_many = False
+
+    if isinstance(a, list):
+        a_many = True
+
+    if isinstance(b, list):
+        b_many = True
+
+    delegate_map = {
+        (False, False): _some_one_to_one,
+        (False, True): _some_one_to_many,
+        (True, False): _some_many_to_one,
+        (True, True): _some_many_to_many
+    }
+
+    some_del = delegate_map[(a_many, b_many)]
+    return some_del(callback, a, b)
+
+
+def _some_one_to_one(callback, a, b):
+    return callback(a, b)
+
+
 def _some_one_to_many(callback, a, b):
     for el in b:
         if callback(a, el):
+            return True
+
+    return False
+
+
+def _some_many_to_one(callback, a, b):
+    for el in a:
+        if callback(el, b):
             return True
 
     return False
@@ -323,27 +358,30 @@ def evaluate(json: dict, operator):
     return operator
 
 
-def list_files(dir_path: str):
+def list_files(args):
+    dir_path = args.root
+
     for root, dirs, files in os.walk(dir_path):
         for f in files:
             yield os.path.join(root, f)
 
 
 def main():
-    data_root, token_list = get_args()
+    args, token_list = get_args()
+
     token_queue = Queue(token_list)
 
     tree = create_tree(token_queue)
 
     valid_files = []
-    for json_path in list_files(data_root):
+    for json_path in list_files(args):
         json_data = get_json(json_path)
         try:
             retv = evaluate(json_data, tree)
         except InvalidPathOrExpression as ipoe:
             return ipoe
         except TypeError:
-            retv = False
+           retv = False
 
         if not isinstance(retv, bool):
             raise TypeError(f"JQL does not resolve to a boolean (resolves to '{retv}')")
@@ -353,7 +391,7 @@ def main():
 
     print(f"Files matching search criteria...")
 
-    for vf in valid_files:
+    for vf in sorted(valid_files):
         print(f"{vf}")
 
     print(f"({len(valid_files)} files match)")
