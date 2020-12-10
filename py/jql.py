@@ -382,7 +382,15 @@ def main():
 
     valid_files = []
     for json_path in list_files(args):
-        json_data = get_json(json_path)
+        try:
+            json_data = get_json(json_path)
+
+        except:
+            if json_path.endswith('.json'):
+                print(f"Error parsing '{json_path}'", flush=True, file=sys.stderr)
+
+            continue
+
         try:
             retv = evaluate(json_data, tree)
         except InvalidPathOrExpression as ipoe:
