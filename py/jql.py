@@ -119,7 +119,10 @@ OPS = [
 ALL_OPS = set(map(lambda t: t[0], OPS))
 
 
-def create_tree(tokens: Queue, force_string=False) -> dict:
+BACKREF_REGEX = re.compile(r'\$(?P<refid>\d+)')
+
+
+def create_tree(tokens: Queue, force_string=False, leaves=[]) -> dict:
     logging.debug("Creating expression tree from '%s'...", tokens.peek())
 
     # Key = op
@@ -131,6 +134,7 @@ def create_tree(tokens: Queue, force_string=False) -> dict:
             try:
                 val = float(curr)
                 logging.debug("Parsing '%s' as float", curr)
+                leaves.append(val)
                 return val
             except ValueError:
                 pass
@@ -138,20 +142,32 @@ def create_tree(tokens: Queue, force_string=False) -> dict:
             try:
                 val = int(curr)
                 logging.debug("Parsing '%s' as int", curr)
+                leaves.append(val)
                 return val
             except ValueError:
                 pass
 
             if curr.lower() == 'true':
                 logging.debug("Parsing '%s' as True bool", curr)
-                return True
+                val = True
+                leaves.append(val)
+                return val
 
             if curr.lower() == 'false':
                 logging.debug("Parsing '%s' as False bool", curr)
-                return False
+                val = False
+                leaves.append(val)
+                return val
+
+        if m := BACKREF_REGEX.match(curr):
+            idx = int(m['refid'])
+            if idx <= len(leaves):
+                logging.debug("Parsing '%s' as back-reference", curr)
+                return leaves[idx - 1]
 
         logging.debug("Parsing '%s' as bare string", curr)
 
+        leaves.append(curr)
         return curr
 
     logging.debug("Parsing '%s' as operator...", curr)
@@ -160,7 +176,7 @@ def create_tree(tokens: Queue, force_string=False) -> dict:
         if curr == op:
             logging.debug(op)
             retv = {}
-            args = tuple( create_tree(tokens, force_string) for _ in range(num_args) )
+            args = tuple( create_tree(tokens, force_string, leaves) for _ in range(num_args) )
             retv[op] = args
 
             return retv
