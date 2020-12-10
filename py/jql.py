@@ -2,7 +2,12 @@ import re
 import os
 import sys
 import json
+import shlex
+import logging
 import argparse
+
+
+logging.basicConfig()
 
 
 class Queue:
@@ -30,18 +35,27 @@ def get_args():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('root', type=str, help='Path to root to search for .json files')
-    parser.add_argument('-r', '--recurse', action='store_true')
+    parser.add_argument('-r', '--recurse', action='store_true', help='Recursively search for files')
+    parser.add_argument('-v', dest='verbosity', action='count', default=0, help='Increase level of logging (default: none)')
 
     args, jql_tokens = parser.parse_known_args()
+
+    if len(jql_tokens) == 0:
+        raw_in = input("JQL expression> ")
+        jql_tokens = shlex.split(raw_in)
 
     return args, jql_tokens
 
 
 def get_json(path: str) -> dict:
+    logging.info("Loading '%s' as json", path)
     try:
         with open(path, 'r') as fin:
             data = json.load(fin)
+
     except UnicodeDecodeError:
+        logging.debug("Using cp1252 encoding for '%s'", path)
+
         with open(path, 'r', encoding='cp1252') as fin:
             data = json.load(fin)
 
@@ -77,6 +91,8 @@ ALL_OPS = set(map(lambda t: t[0], OPS))
 
 
 def create_tree(tokens: Queue) -> dict:
+    logging.info('Creating expression tree...')
+
     # Key = op
     # Value = dict/tuple
     curr = tokens.pop()
@@ -108,6 +124,8 @@ def create_tree(tokens: Queue) -> dict:
 
 ARRAY_PATH_REGEX = re.compile(r'^(?P<path>[A-Za-z0-9]+)\[(?P<idx>\d+)?\]$')
 def get_value(json: dict, prop_path: str):
+    logging.debug("Getting value of '%s'", prop_path)
+
     curr = [json]
     for path_el in prop_path.split('.')[1:]:
         new_curr = []
@@ -118,6 +136,7 @@ def get_value(json: dict, prop_path: str):
                 idx = m['idx']
 
                 if path not in el:
+                    logging.debug("Path '%s' not found - returning no value", path)
                     return None
 
                 elif idx is None:
@@ -127,11 +146,13 @@ def get_value(json: dict, prop_path: str):
                     idx = int(idx)
 
                     if len(el[path]) < idx:
+                        logging.debug("Index '%d' out of range (len=%d) - returning no value", idx, len(el[path]))
                         return None
                     else:
                         new_curr.append(el[path][idx])
 
             elif path_el not in el:
+                logging.debug("Path '%s' not found - returning no value", path_el)
                 return None
 
             else:
@@ -145,6 +166,7 @@ def get_value(json: dict, prop_path: str):
     if isinstance(curr, list):
         curr = [evaluate(json, el) for el in curr]
 
+    logging.debug(curr)
     return curr
 
 
@@ -228,21 +250,30 @@ def _some_many_to_many(callback, a, b):
 PATH_REGEX = re.compile(r'^(\.[A-Za-z0-9]+(\[\d*\])?)+$')
 def evaluate(json: dict, operator):
     # A String operator should always be a property-path
-    if isinstance(operator, str):
-        if PATH_REGEX.search(operator) is not None:
+    if isinstance(operator, str) and PATH_REGEX.search(operator) is not None:
+            logging.debug("Evaluating '%s' as path", operator)
+
             value = get_value(json, operator)
+
+            logging.debug(value)
             return value
 
-        return operator
-
     # These are parameters, and need to be eval'd/returned individually
-    if isinstance(operator, tuple):
+    elif isinstance(operator, tuple):
+        logging.debug("Evaluating %s as parameters", repr(operator))
+
         retv = tuple( evaluate(json, param) for param in operator )
+
+        logging.debug(repr(retv))
         return retv
 
     # This is an actual operator
     if isinstance(operator, dict):
+        logging.debug("Evaluating expression...")
+
         for op in operator:
+            logging.debug("Evaluating '%s'", op)
+
             params = operator[op]
 
             if op == '-not':
@@ -304,7 +335,8 @@ def evaluate(json: dict, operator):
                     return False
 
                 if param_1 is None:
-                    raise InvalidPathOrExpression(params[1], 'Invalid regular expression')
+                    logging.critical("Invalid regular expression '%s'", params[1])
+                    return False
 
                 return some(lambda a, b: re.search(b, a) is not None, param_0, param_1)
 
@@ -362,26 +394,48 @@ def evaluate(json: dict, operator):
 
                 return some(lambda p: isinstance(p, bool), param_0)
 
+    logging.debug("Evaluating '%s' as bare string", operator)
     return operator
 
 
 def list_files(args):
     dir_path = args.root
 
+    logging.info("Searching for files under '%s'", dir_path)
+
     for root, dirs, files in os.walk(dir_path):
         for f in files:
+            logging.debug("Found '%s'", f)
             yield os.path.join(root, f)
 
         if not args.recurse:
+            logging.debug("Halting recursive search")
             return
+
+
+def set_logging_level(verbosity: int):
+    if verbosity == 0:
+        level = logging.WARNING
+    elif verbosity == 1:
+        level = logging.INFO
+    else:
+        level = logging.DEBUG
+
+    logging.root.setLevel(level)
 
 
 def main():
     args, token_list = get_args()
 
+    set_logging_level(args.verbosity)
+
     token_queue = Queue(token_list)
 
-    tree = create_tree(token_queue)
+    try:
+        tree = create_tree(token_queue)
+    except:
+        logging.critical("Could not parse expression: %s", ' '.join(map(lambda t: f'"{t}"', token_list)))
+        return
 
     valid_files = []
     for json_path in list_files(args):
@@ -390,14 +444,14 @@ def main():
 
         except:
             if json_path.endswith('.json'):
-                print(f"Error parsing '{json_path}'", flush=True, file=sys.stderr)
+                logging.warn("Error parsing '%s' - skipping", json_path)
+            else:
+                logging.debug("Error parsing '%s' - skipping", json_path)
 
             continue
 
-        try:
-            retv = evaluate(json_data, tree)
-        except InvalidPathOrExpression as ipoe:
-            return ipoe
+        retv = evaluate(json_data, tree)
+        logging.debug("File '%s' evaluated to '%s'", json_path, retv)
 
         if not isinstance(retv, bool):
             raise TypeError(f"JQL does not resolve to a boolean (resolves to '{retv}')")
