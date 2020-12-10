@@ -64,6 +64,7 @@ def get_args():
     parser.add_argument('root', type=str, help='Path to root to search for .json files')
     parser.add_argument('-r', '--recurse', action='store_true', help='Recursively search for files')
     parser.add_argument('-i', '--insensitive', action='store_true', help='Compare strings as case-insensitive (does not affect JSON paths)')
+    parser.add_argument('-s', '--string', dest='force_string', action='store_true', help='Compare all values as strings')
     parser.add_argument('-v', dest='verbosity', action='count', default=0, help='Increase level of logging (default: none)')
 
     args, jql_tokens = parser.parse_known_args()
@@ -118,7 +119,7 @@ OPS = [
 ALL_OPS = set(map(lambda t: t[0], OPS))
 
 
-def create_tree(tokens: Queue) -> dict:
+def create_tree(tokens: Queue, force_string=False) -> dict:
     logging.debug("Creating expression tree from '%s'...", tokens.peek())
 
     # Key = op
@@ -126,17 +127,28 @@ def create_tree(tokens: Queue) -> dict:
     curr = tokens.pop()
 
     if curr not in ALL_OPS:
-        if curr.isnumeric():
-            logging.debug("Parsing '%s' as number", curr)
-            return float(curr) if '.' in curr else int(curr)
+        if not force_string:
+            try:
+                val = float(curr)
+                logging.debug("Parsing '%s' as float", curr)
+                return val
+            except ValueError:
+                pass
 
-        if curr.lower() == 'true':
-            logging.debug("Parsing '%s' as True bool", curr)
-            return True
+            try:
+                val = int(curr)
+                logging.debug("Parsing '%s' as int", curr)
+                return val
+            except ValueError:
+                pass
 
-        if curr.lower() == 'false':
-            logging.debug("Parsing '%s' as False bool", curr)
-            return False
+            if curr.lower() == 'true':
+                logging.debug("Parsing '%s' as True bool", curr)
+                return True
+
+            if curr.lower() == 'false':
+                logging.debug("Parsing '%s' as False bool", curr)
+                return False
 
         logging.debug("Parsing '%s' as bare string", curr)
 
@@ -148,7 +160,7 @@ def create_tree(tokens: Queue) -> dict:
         if curr == op:
             logging.debug(op)
             retv = {}
-            args = tuple( create_tree(tokens) for _ in range(num_args) )
+            args = tuple( create_tree(tokens, force_string) for _ in range(num_args) )
             retv[op] = args
 
             return retv
@@ -473,7 +485,7 @@ def main():
 
     logging.info('Creating expression tree...')
     try:
-        tree = create_tree(token_queue)
+        tree = create_tree(token_queue, args.force_string)
     except:
         logging.critical("Could not parse expression: %s", ' '.join(map(lambda t: f'"{t}"', token_list)))
         return
