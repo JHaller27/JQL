@@ -372,6 +372,9 @@ def list_files(args):
         for f in files:
             yield os.path.join(root, f)
 
+        if not args.recurse:
+            return
+
 
 def main():
     args, token_list = get_args()
