@@ -39,7 +39,9 @@ All expressions are of the form `<operator> <path> [params]` (i.e. prefix notati
 
 Expressions may be conjoined to create complex expressions.
 
-Note: This implementation does not currently support passing two paths as parameters.
+In the Python implementation,
+the `path` and `params` arguments may take the form `$<id>` to back-reference the primitive or path value of the parameter at `id` (1-indexed)
+(after that value has been evaluated by type, but before it has been evaluated against the JSON if it is a path).
 
 ## Path
 
