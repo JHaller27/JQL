@@ -70,7 +70,8 @@ OPS = [
     ('-obj', 1),
     ('-arr', 1),
     ('-str', 1),
-    ('-num', 1)
+    ('-num', 1),
+    ('-bool', 1)
 ]
 ALL_OPS = set(map(lambda t: t[0], OPS))
 
@@ -354,6 +355,11 @@ def evaluate(json: dict, operator):
                 param_0 = evaluate(json, params[0])
 
                 return some(lambda p: isinstance(p, int) or isinstance(p, float), param_0)
+
+            if op == '-bool':
+                param_0 = evaluate(json, params[0])
+
+                return some(lambda p: isinstance(p, bool), param_0)
 
     return operator
 
