@@ -149,12 +149,16 @@ def get_value(json: dict, prop_path: str):
 
 
 def some(callback, a=None, b=None) -> bool:
-    if a is None:
-        return _some_no_args(callback)
-    elif b is None:
-        return _some_one_arg(callback, a)
-    else:
-        return _some_two_arg(callback, a, b)
+    try:
+        if a is None:
+            return _some_no_args(callback)
+        elif b is None:
+            return _some_one_arg(callback, a)
+        else:
+            return _some_two_arg(callback, a, b)
+
+    except TypeError:
+        return False
 
 
 def _some_no_args(callback):
@@ -162,6 +166,9 @@ def _some_no_args(callback):
 
 
 def _some_one_arg(callback, a):
+    if not isinstance(a, list):
+        a = [a]
+
     for x in a:
         if callback(x):
             return True
@@ -245,21 +252,15 @@ def evaluate(json: dict, operator):
 
             if op == '-and':
                 param_0 = evaluate(json, params[0])
-                if some(lambda p: not p, param_0):
-                    return False
-
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda p: p, param_1)
+                return some(lambda a, b: a and b, param_0, param_1)
 
             if op == '-or':
                 param_0 = evaluate(json, params[0])
-                if some(lambda p: p, param_0):
-                    return True
-
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda p: p, param_1)
+                return some(lambda a, b: a or b, param_0, param_1)
 
             if op == '-ex':
                 param_0 = evaluate(json, params[0])
@@ -386,8 +387,6 @@ def main():
             retv = evaluate(json_data, tree)
         except InvalidPathOrExpression as ipoe:
             return ipoe
-        except TypeError:
-           retv = False
 
         if not isinstance(retv, bool):
             raise TypeError(f"JQL does not resolve to a boolean (resolves to '{retv}')")
