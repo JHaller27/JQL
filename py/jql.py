@@ -20,6 +20,9 @@ class Queue:
     def pop(self) -> str:
         return self._items.pop(0)
 
+    def peek(self) -> str:
+        return self._items[0]
+
 
 class InvalidPathOrExpression(Exception):
     def __init__(self, *args):
@@ -31,11 +34,36 @@ class InvalidPathOrExpression(Exception):
         super().__init__(msg)
 
 
+class Comparer:
+    def compare(self, a, b) -> int:
+        a = str(a)
+        b = str(b)
+
+        if a < b:
+            return -1
+        elif a > b:
+            return 1
+        else:
+            return 0
+
+
+class InsensitiveComparer(Comparer):
+    def compare(self, a, b) -> int:
+        a = str(a).lower()
+        b = str(b).lower()
+
+        return super().compare(a, b)
+
+
+comparer = Comparer()
+
+
 def get_args():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('root', type=str, help='Path to root to search for .json files')
     parser.add_argument('-r', '--recurse', action='store_true', help='Recursively search for files')
+    parser.add_argument('-i', '--insensitive', action='store_true', help='Compare strings as case-insensitive (does not affect JSON paths)')
     parser.add_argument('-v', dest='verbosity', action='count', default=0, help='Increase level of logging (default: none)')
 
     args, jql_tokens = parser.parse_known_args()
@@ -91,7 +119,7 @@ ALL_OPS = set(map(lambda t: t[0], OPS))
 
 
 def create_tree(tokens: Queue) -> dict:
-    logging.info('Creating expression tree...')
+    logging.debug("Creating expression tree from '%s'...", tokens.peek())
 
     # Key = op
     # Value = dict/tuple
@@ -99,20 +127,26 @@ def create_tree(tokens: Queue) -> dict:
 
     if curr not in ALL_OPS:
         if curr.isnumeric():
+            logging.debug("Parsing '%s' as number", curr)
             return float(curr) if '.' in curr else int(curr)
 
         if curr.lower() == 'true':
+            logging.debug("Parsing '%s' as True bool", curr)
             return True
 
         if curr.lower() == 'false':
+            logging.debug("Parsing '%s' as False bool", curr)
             return False
+
+        logging.debug("Parsing '%s' as bare string", curr)
 
         return curr
 
-    curr = curr
+    logging.debug("Parsing '%s' as operator...", curr)
 
     for op, num_args in OPS:
         if curr == op:
+            logging.debug(op)
             retv = {}
             args = tuple( create_tree(tokens) for _ in range(num_args) )
             retv[op] = args
@@ -179,7 +213,7 @@ def some(callback, a=None, b=None) -> bool:
         else:
             return _some_two_arg(callback, a, b)
 
-    except TypeError:
+    except TypeError as te:
         return False
 
 
@@ -249,6 +283,8 @@ def _some_many_to_many(callback, a, b):
 
 PATH_REGEX = re.compile(r'^(\.[A-Za-z0-9]+(\[\d*\])?)+$')
 def evaluate(json: dict, operator):
+    global comparer
+
     # A String operator should always be a property-path
     if isinstance(operator, str) and PATH_REGEX.search(operator) is not None:
             logging.debug("Evaluating '%s' as path", operator)
@@ -319,13 +355,13 @@ def evaluate(json: dict, operator):
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: str(a).lower() == str(b).lower(), param_0, param_1)
+                return some(lambda a, b: comparer.compare(a, b) == 0, param_0, param_1)
 
             if op == '-ne':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: str(a).lower() != str(b).lower(), param_0, param_1)
+                return some(lambda a, b: comparer.compare(a, b) != 0, param_0, param_1)
 
             if op == '-mt' or op == '-rx':
                 param_0 = evaluate(json, params[0])
@@ -344,25 +380,25 @@ def evaluate(json: dict, operator):
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: a < b, param_0, param_1)
+                return some(lambda a, b: comparer.compare(a, b) < 0, param_0, param_1)
 
             if op == '-le':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: a <= b, param_0, param_1)
+                return some(lambda a, b: comparer.compare(a, b) <= 0, param_0, param_1)
 
             if op == '-gt':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: a > b, param_0, param_1)
+                return some(lambda a, b: comparer.compare(a, b) > 0, param_0, param_1)
 
             if op == '-ge':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: a >= b, param_0, param_1)
+                return some(lambda a, b: comparer.compare(a, b) >= 0, param_0, param_1)
 
             if op == '-len':
                 param_0 = evaluate(json, params[0])
@@ -425,12 +461,17 @@ def set_logging_level(verbosity: int):
 
 
 def main():
+    global comparer
+
     args, token_list = get_args()
 
     set_logging_level(args.verbosity)
+    if args.insensitive:
+        comparer = InsensitiveComparer()
 
     token_queue = Queue(token_list)
 
+    logging.info('Creating expression tree...')
     try:
         tree = create_tree(token_queue)
     except:
