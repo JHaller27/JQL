@@ -5,6 +5,8 @@ import json
 import shlex
 import logging
 import argparse
+from evaluators import SomeEvaluator as Some
+from evaluators import AllEvaluator as All
 
 
 logging.basicConfig()
@@ -129,7 +131,7 @@ def create_tree(tokens: Queue, force_string=False, leaves=[]) -> dict:
     # Value = dict/tuple
     curr = tokens.pop()
 
-    if curr not in ALL_OPS:
+    if curr.lower() not in ALL_OPS:
         if not force_string:
             try:
                 val = float(curr)
@@ -173,11 +175,11 @@ def create_tree(tokens: Queue, force_string=False, leaves=[]) -> dict:
     logging.debug("Parsing '%s' as operator...", curr)
 
     for op, num_args in OPS:
-        if curr == op:
-            logging.debug(op)
+        if curr.lower() == op:
+            logging.debug(curr)
             retv = {}
             args = tuple( create_tree(tokens, force_string, leaves) for _ in range(num_args) )
-            retv[op] = args
+            retv[curr] = args
 
             return retv
 
@@ -235,83 +237,6 @@ def get_value(json: dict, prop_path: str):
     return curr
 
 
-def some(callback, a=None, b=None) -> bool:
-    try:
-        if a is None:
-            return _some_no_args(callback)
-        elif b is None:
-            return _some_one_arg(callback, a)
-        else:
-            return _some_two_arg(callback, a, b)
-
-    except TypeError as te:
-        return False
-
-
-def _some_no_args(callback):
-    return callback()
-
-
-def _some_one_arg(callback, a):
-    if not isinstance(a, list):
-        a = [a]
-
-    for x in a:
-        if callback(x):
-            return True
-
-    return False
-
-
-def _some_two_arg(callback, a, b):
-    a_many = False
-    b_many = False
-
-    if isinstance(a, list):
-        a_many = True
-
-    if isinstance(b, list):
-        b_many = True
-
-    delegate_map = {
-        (False, False): _some_one_to_one,
-        (False, True): _some_one_to_many,
-        (True, False): _some_many_to_one,
-        (True, True): _some_many_to_many
-    }
-
-    some_del = delegate_map[(a_many, b_many)]
-    return some_del(callback, a, b)
-
-
-def _some_one_to_one(callback, a, b):
-    return callback(a, b)
-
-
-def _some_one_to_many(callback, a, b):
-    for el in b:
-        if callback(a, el):
-            return True
-
-    return False
-
-
-def _some_many_to_one(callback, a, b):
-    for el in a:
-        if callback(el, b):
-            return True
-
-    return False
-
-
-def _some_many_to_many(callback, a, b):
-    for x, y in zip(a, b):
-        if callback(x, y):
-            return True
-
-    return False
-
-
 PATH_REGEX = re.compile(r'^(\.[A-Za-z0-9]+(\[\d*\])?)+$')
 def evaluate(json: dict, operator):
     global comparer
@@ -341,60 +266,69 @@ def evaluate(json: dict, operator):
         for op in operator:
             logging.debug("Evaluating '%s'", op)
 
+            lop = op.lower()
+
+            if op.islower():
+                evaluator = Some
+            elif op.isupper():
+                evaluator = All
+            else:
+                logging.critical('Operator %s is of mixed case - cannot evaluate', op)
+
             params = operator[op]
 
-            if op == '-not':
+            if lop == '-not':
                 param_0 = evaluate(json, params[0])
 
-                return some(lambda p: not p, param_0)
+                return evaluator.evaluate(lambda p: not p, param_0)
 
-            if op == '-and':
-                param_0 = evaluate(json, params[0])
-                param_1 = evaluate(json, params[1])
-
-                return some(lambda a, b: a and b, param_0, param_1)
-
-            if op == '-or':
+            if lop == '-and':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: a or b, param_0, param_1)
+                return evaluator.evaluate(lambda a, b: a and b, param_0, param_1)
 
-            if op == '-ex':
+            if lop == '-or':
+                param_0 = evaluate(json, params[0])
+                param_1 = evaluate(json, params[1])
+
+                return evaluator.evaluate(lambda a, b: a or b, param_0, param_1)
+
+            if lop == '-ex':
                 param_0 = evaluate(json, params[0])
 
                 return param_0 is not None
 
-            if op == '-nex':
+            if lop == '-nex':
                 param_0 = evaluate(json, params[0])
 
                 return param_0 is None
 
-            if op == '-in':
+            if lop == '-in':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: a in b, param_0, param_1)
+                return evaluator.evaluate(lambda a, b: a in b, param_0, param_1)
 
-            if op == '-nin':
+            if lop == '-nin':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: a not in b, param_0, param_1)
+                return evaluator.evaluate(lambda a, b: a not in b, param_0, param_1)
 
-            if op == '-eq':
+            if lop == '-eq':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: comparer.compare(a, b) == 0, param_0, param_1)
+                return evaluator.evaluate(lambda a, b: comparer.compare(a, b) == 0, param_0, param_1)
 
-            if op == '-ne':
+            if lop == '-ne':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: comparer.compare(a, b) != 0, param_0, param_1)
+                return evaluator.evaluate(lambda a, b: comparer.compare(a, b) != 0, param_0, param_1)
 
-            if op == '-mt' or op == '-rx':
+            if lop == '-mt' or lop == '-rx':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
@@ -405,61 +339,61 @@ def evaluate(json: dict, operator):
                     logging.critical("Invalid regular expression '%s'", params[1])
                     return False
 
-                return some(lambda a, b: re.search(b, a) is not None, param_0, param_1)
+                return evaluator.evaluate(lambda a, b: re.search(b, a) is not None, param_0, param_1)
 
-            if op == '-lt':
+            if lop == '-lt':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: comparer.compare(a, b) < 0, param_0, param_1)
+                return evaluator.evaluate(lambda a, b: comparer.compare(a, b) < 0, param_0, param_1)
 
-            if op == '-le':
+            if lop == '-le':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: comparer.compare(a, b) <= 0, param_0, param_1)
+                return evaluator.evaluate(lambda a, b: comparer.compare(a, b) <= 0, param_0, param_1)
 
-            if op == '-gt':
+            if lop == '-gt':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: comparer.compare(a, b) > 0, param_0, param_1)
+                return evaluator.evaluate(lambda a, b: comparer.compare(a, b) > 0, param_0, param_1)
 
-            if op == '-ge':
+            if lop == '-ge':
                 param_0 = evaluate(json, params[0])
                 param_1 = evaluate(json, params[1])
 
-                return some(lambda a, b: comparer.compare(a, b) >= 0, param_0, param_1)
+                return evaluator.evaluate(lambda a, b: comparer.compare(a, b) >= 0, param_0, param_1)
 
-            if op == '-len':
+            if lop == '-len':
                 param_0 = evaluate(json, params[0])
 
                 return len(param_0)
 
-            if op == '-obj':
+            if lop == '-obj':
                 param_0 = evaluate(json, params[0])
 
-                return some(lambda p: isinstance(p, dict), param_0)
+                return evaluator.evaluate(lambda p: isinstance(p, dict), param_0)
 
-            if op == '-arr':
+            if lop == '-arr':
                 param_0 = evaluate(json, params[0])
 
-                return some(lambda p: isinstance(p, list), param_0)
+                return evaluator.evaluate(lambda p: isinstance(p, list), param_0)
 
-            if op == '-str':
+            if lop == '-str':
                 param_0 = evaluate(json, params[0])
 
-                return some(lambda p: isinstance(p, str), param_0)
+                return evaluator.evaluate(lambda p: isinstance(p, str), param_0)
 
-            if op == '-num':
+            if lop == '-num':
                 param_0 = evaluate(json, params[0])
 
-                return some(lambda p: isinstance(p, int) or isinstance(p, float), param_0)
+                return evaluator.evaluate(lambda p: isinstance(p, int) or isinstance(p, float), param_0)
 
-            if op == '-bool':
+            if lop == '-bool':
                 param_0 = evaluate(json, params[0])
 
-                return some(lambda p: isinstance(p, bool), param_0)
+                return evaluator.evaluate(lambda p: isinstance(p, bool), param_0)
 
     logging.debug("Evaluating '%s' as bare string", operator)
     return operator
