@@ -168,6 +168,9 @@ class AllEvaluator(_Evaluator):
         return True
 
     def _all_many_to_many(self, callback, a, b):
+        if len(a) == 0 or len(b) == 0:
+            return False
+
         for x, y in zip(a, b):
             if not callback(x, y):
                 return False
