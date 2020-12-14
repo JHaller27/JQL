@@ -220,7 +220,7 @@ def get_value(json: dict, prop_path: str):
             else:
                 new_curr.append(el[path_el])
 
-            curr = new_curr
+        curr = new_curr
 
     if isinstance(curr, str):
         curr = curr
