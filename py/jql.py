@@ -193,7 +193,10 @@ def get_value(json: dict, prop_path: str):
         new_curr = []
 
         for el in curr:
-            if m := ARRAY_PATH_REGEX.match(path_el):
+            if el is None:
+                continue
+
+            elif m := ARRAY_PATH_REGEX.match(path_el):
                 path = m['path']
                 idx = m['idx']
 
