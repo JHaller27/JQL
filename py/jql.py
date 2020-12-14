@@ -513,7 +513,7 @@ def main():
 
         except:
             if json_path.endswith('.json'):
-                logging.warn("Error parsing '%s' - skipping", json_path)
+                logging.warning("Error parsing '%s' - skipping", json_path)
             else:
                 logging.debug("Error parsing '%s' - skipping", json_path)
 
