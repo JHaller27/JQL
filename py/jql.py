@@ -446,6 +446,7 @@ def main():
         logging.critical("Could not parse expression: %s", ' '.join(map(lambda t: f'"{t}"', token_list)))
         return
 
+    count_all_files = 0
     valid_files = []
     for json_path in list_files(args):
         try:
@@ -458,6 +459,8 @@ def main():
                 logging.debug("Error parsing '%s' - skipping", json_path)
 
             continue
+
+        count_all_files += 1
 
         retv = evaluate(json_data, tree)
         logging.debug("File '%s' evaluated to '%s'", json_path, retv)
@@ -473,7 +476,7 @@ def main():
     for vf in sorted(valid_files):
         print(f"{vf}")
 
-    print(f"({len(valid_files)} files match)")
+    print(f"({len(valid_files)}/{count_all_files} files match)")
 
 
 if __name__ == "__main__":
