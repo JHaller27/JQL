@@ -75,6 +75,8 @@ def get_args():
         raw_in = input("JQL expression> ")
         jql_tokens = shlex.split(raw_in)
 
+    set_logging_level(args.verbosity)
+
     return args, jql_tokens
 
 
@@ -430,7 +432,8 @@ def main():
 
     args, token_list = get_args()
 
-    set_logging_level(args.verbosity)
+    logging.info(args)
+
     if args.insensitive:
         comparer = InsensitiveComparer()
 
