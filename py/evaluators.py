@@ -1,5 +1,5 @@
 class _Evaluator:
-    def _evaluate(self, callback, a, b):
+    def _evaluate(self, callback, a=None, b=None):
         raise NotImplementedError
 
 
@@ -23,7 +23,7 @@ class SomeEvaluator(_Evaluator):
         return SomeEvaluator._instance
 
     @staticmethod
-    def evaluate(callback, a, b):
+    def evaluate(callback, a=None, b=None):
         return SomeEvaluator.instance()._evaluate(callback, a, b)
 
     def _evaluate(self, callback, a=None, b=None) -> bool:
@@ -109,7 +109,7 @@ class AllEvaluator(_Evaluator):
         return AllEvaluator._instance
 
     @staticmethod
-    def evaluate(callback, a, b):
+    def evaluate(callback, a=None, b=None):
         return AllEvaluator.instance()._evaluate(callback, a, b)
 
     def _evaluate(self, callback, a=None, b=None) -> bool:
