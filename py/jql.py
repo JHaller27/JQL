@@ -67,6 +67,7 @@ def get_args():
     parser.add_argument('--recurse', action='store_true', help='Recursively search for files')
     parser.add_argument('--insensitive', action='store_true', help='Compare strings as case-insensitive (does not affect JSON paths)')
     parser.add_argument('--string', dest='force_string', action='store_true', help='Compare all values as strings')
+    parser.add_argument('--list', action='store_true', help='Skip all meta output and only list files')
     parser.add_argument('-v', dest='verbosity', action='count', default=0, help='Increase level of logging (default: none)')
 
     args, jql_tokens = parser.parse_known_args()
@@ -471,12 +472,14 @@ def main():
         if retv:
             valid_files.append(json_path)
 
-    print(f"Files matching search criteria...")
+    if not args.list:
+        print(f"Files matching search criteria...")
 
     for vf in sorted(valid_files):
         print(f"{vf}")
 
-    print(f"({len(valid_files)}/{count_all_files} files match)")
+    if not args.list:
+        print(f"({len(valid_files)}/{count_all_files} files match)")
 
 
 if __name__ == "__main__":
