@@ -417,6 +417,10 @@ def list_files(args):
             return
 
 
+def sort_files(files):
+    return sorted(files, key=lambda file: (os.path.dirname(file), os.path.basename(file)))
+
+
 def set_logging_level(verbosity: int):
     if verbosity == 0:
         level = logging.WARNING
@@ -475,7 +479,7 @@ def main():
     if not args.list:
         print(f"Files matching search criteria...")
 
-    for vf in sorted(valid_files):
+    for vf in sort_files(valid_files):
         print(f"{vf}")
 
     if not args.list:
