@@ -215,7 +215,7 @@ def get_value(json: dict, prop_path: str):
                 else:
                     idx = int(idx)
 
-                    if len(el[path]) < idx:
+                    if len(el[path]) <= idx:
                         logging.debug("Index '%d' out of range (len=%d) - returning no value", idx, len(el[path]))
                         return None
                     else:
