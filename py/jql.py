@@ -137,16 +137,16 @@ def create_tree(tokens: Queue, force_string=False, leaves=[]) -> dict:
     if curr.lower() not in ALL_OPS:
         if not force_string:
             try:
-                val = float(curr)
-                logging.debug("Parsing '%s' as float", curr)
+                val = int(curr)
+                logging.debug("Parsing '%s' as int", curr)
                 leaves.append(val)
                 return val
             except ValueError:
                 pass
 
             try:
-                val = int(curr)
-                logging.debug("Parsing '%s' as int", curr)
+                val = float(curr)
+                logging.debug("Parsing '%s' as float", curr)
                 leaves.append(val)
                 return val
             except ValueError:
