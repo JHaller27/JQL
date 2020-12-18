@@ -7,6 +7,7 @@ import logging
 import argparse
 from evaluators import SomeEvaluator as Some
 from evaluators import AllEvaluator as All
+from comparers import *
 
 
 logging.basicConfig()
@@ -34,27 +35,6 @@ class InvalidPathOrExpression(Exception):
             msg += '\n\t'.join(args[1:])
 
         super().__init__(msg)
-
-
-class Comparer:
-    def compare(self, a, b) -> int:
-        a = str(a)
-        b = str(b)
-
-        if a < b:
-            return -1
-        elif a > b:
-            return 1
-        else:
-            return 0
-
-
-class InsensitiveComparer(Comparer):
-    def compare(self, a, b) -> int:
-        a = str(a).lower()
-        b = str(b).lower()
-
-        return super().compare(a, b)
 
 
 comparer = Comparer()
@@ -135,34 +115,33 @@ def create_tree(tokens: Queue, force_string=False, leaves=[]) -> dict:
     curr = tokens.pop()
 
     if curr.lower() not in ALL_OPS:
-        if not force_string:
-            try:
-                val = int(curr)
-                logging.debug("Parsing '%s' as int", curr)
-                leaves.append(val)
-                return val
-            except ValueError:
-                pass
+        try:
+            val = int(curr)
+            logging.debug("Parsing '%s' as int", curr)
+            leaves.append(val)
+            return val
+        except ValueError:
+            pass
 
-            try:
-                val = float(curr)
-                logging.debug("Parsing '%s' as float", curr)
-                leaves.append(val)
-                return val
-            except ValueError:
-                pass
+        try:
+            val = float(curr)
+            logging.debug("Parsing '%s' as float", curr)
+            leaves.append(val)
+            return val
+        except ValueError:
+            pass
 
-            if curr.lower() == 'true':
-                logging.debug("Parsing '%s' as True bool", curr)
-                val = True
-                leaves.append(val)
-                return val
+        if curr.lower() == 'true':
+            logging.debug("Parsing '%s' as True bool", curr)
+            val = True
+            leaves.append(val)
+            return val
 
-            if curr.lower() == 'false':
-                logging.debug("Parsing '%s' as False bool", curr)
-                val = False
-                leaves.append(val)
-                return val
+        if curr.lower() == 'false':
+            logging.debug("Parsing '%s' as False bool", curr)
+            val = False
+            leaves.append(val)
+            return val
 
         if m := BACKREF_REGEX.match(curr):
             idx = int(m['refid'])
@@ -181,7 +160,7 @@ def create_tree(tokens: Queue, force_string=False, leaves=[]) -> dict:
         if curr.lower() == op:
             logging.debug(curr)
             retv = {}
-            args = tuple( create_tree(tokens, force_string, leaves) for _ in range(num_args) )
+            args = tuple( create_tree(tokens, leaves) for _ in range(num_args) )
             retv[curr] = args
 
             return retv
@@ -398,7 +377,7 @@ def evaluate(json: dict, operator):
 
                 return evaluator.evaluate(lambda p: isinstance(p, bool), param_0)
 
-    logging.debug("Evaluating '%s' as bare string", operator)
+    logging.debug("Evaluating '%s' as primitive %s", operator, type(operator).__name__)
     return operator
 
 
@@ -440,7 +419,10 @@ def main():
     logging.info(args)
 
     if args.insensitive:
-        comparer = InsensitiveComparer()
+        comparer = InsensitiveComparer(comparer)
+
+    if args.force_string:
+        comparer = ForceStringComparer(comparer)
 
     token_queue = Queue(token_list)
 
