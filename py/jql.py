@@ -5,9 +5,9 @@ import json
 import shlex
 import logging
 import argparse
-from .evaluators import SomeEvaluator as Some
-from .evaluators import AllEvaluator as All
-from .comparers import *
+from evaluators import SomeEvaluator as Some
+from evaluators import AllEvaluator as All
+from comparers import *
 
 
 logging.basicConfig()
