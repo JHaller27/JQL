@@ -383,6 +383,11 @@ def evaluate(json: dict, operator):
 
 
 def list_files(args):
+    if os.path.isfile(args.root):
+        logging.info("Found '%s'", args.root)
+        yield args.root
+        return
+
     dir_path = args.root
 
     logging.info("Searching for files under '%s'", dir_path)
