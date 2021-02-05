@@ -243,10 +243,11 @@ def evaluate(json: dict, operator):
 
     # This is an actual operator
     if isinstance(operator, dict):
-        logging.debug("Evaluating expression...")
-
         for op in operator:
-            logging.debug("Evaluating '%s'", op)
+            if not op.startswith('-'):
+                break
+
+            logging.debug("Evaluating expression '%s'", op)
 
             lop = op.lower()
 
