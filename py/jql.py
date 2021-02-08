@@ -351,7 +351,7 @@ def evaluate(json: dict, operator):
             if lop == '-len':
                 param_0 = evaluate(json, params[0])
 
-                return len(param_0)
+                return evaluator.evaluate(len, param_0)
 
             if lop == '-obj':
                 param_0 = evaluate(json, params[0])
