@@ -60,7 +60,7 @@ Note that `-in ...SomeList` works the same as `-eq ...SomeList[]` where the elem
 However, `-in` can _also_ search for the existence of a property.
 So `-in ...SomeObj SomeKey` and `-ex ...SomeObj.SomeKey` are both valid and equivalent.
 
-In other words, paths with `[]` can be said as "some element of <path>". E.g. `-ex .Titles` can be pronounced as "The Titles property exists"
+In other words, paths with `[]` can be said as "some element of \<path\>". E.g. `-ex .Titles` can be pronounced as "The Titles property exists"
 whereas `-ex .Titles[]` can be pronounced as "**Some element of** the Titles property exists".
 
 **Example**
