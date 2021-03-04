@@ -93,7 +93,7 @@ To help, usages denoted with `<path>` or `<param>` must always be followed by a 
 Usages denoted with `<expression>` must always be some other operation.
 Usages that may be either a literal or an expression are denoted like `<param|expr>` (i.e. "literal parameter or expression").
 
-Additionally, in general, numbers are compared directly, strings are compared case-insensitive-alphabetically.
+Additionally, in general, numbers are compared directly, strings are compared alphabetically.
 
 **Example**
 
@@ -102,6 +102,17 @@ To check if the property-path ".Product.Price" (a number) is outside the range 0
 `-not -and -gte ".Product.Price" 0 -lt ".Product.Price" 100`
 
 This roughly translates to `!(0 <= Product.Price < 100)`
+
+### Tips & Tricks
+
+Capitalizing an operator (e.g. `-EQ`) will check if _ALL_ elements match that criterion; lowercased operators (e.g. `-eq`) check if _ANY_ (at least 1) element matches that criterion. (Mixed-cased operators will throw an error). This is useful when a JSON path matches multiple elements (e.g. elements of an array).
+
+Tired of typing the same JSON path? Use back-references! Any element can be replaced with `$<pos>` (where `pos` is 1-indexed) to reference an existing element.
+For example, these two queries are identical:
+
+`-and -ex "Some.Very.Long.Path.Of.Elements[].That.I.Really[5].Dont.Want.To.Repeat" 5 -neq "Some.Very.Long.Path.Of.Elements[].That.I.Really[5].Dont.Want.To.Repeat" 0`
+
+`-and -ex "Some.Very.Long.Path.Of.Elements[].That.I.Really[5].Dont.Want.To.Repeat" 5 -neq "$1" 0`
 
 ### Not (not)
 
