@@ -7,6 +7,7 @@ Table of Contents
   * [Path](#path)
   * [Operators](#operators)
     * [Order of Operations](#order-of-operations)
+    * [Tips & Tricks](#tips--tricks)
     * [Not (not)](#not-not)
     * [And (and)](#and-and)
     * [Or (or)](#or-or)
@@ -32,6 +33,8 @@ Table of Contents
 
 JSON Query Language (JQL), as one might expect, is a language used to query JSON data.
 It's primary purpose is to determine if a given JSON matches certain conditions (as opposed to competing with SQL and performing joins and aggregations, which are not supported by JQL).
+
+Binaries for linux and windows can be found [here](https://github.com/JHaller27/JQL/actions) for now. Click on the latest workflow, scroll down to Artifacts, and click to download the binary for your OS.
 
 # Language Spec
 
